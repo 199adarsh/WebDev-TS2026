@@ -1,6 +1,4 @@
 
-import React from "react";
-
 type ProgressiveBlurProps = {
   className?: string;
   backgroundColor?: string;
