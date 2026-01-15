@@ -70,7 +70,7 @@ Frontend Developer
   <a href="https://github.com/199adarsh">
     <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg" width="30"/>
   </a>
-  <a href="https://linkedin.com">
+  <a href="https://linkedin.com/adarsh-herwade">
     <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linkedin.svg" width="30"/>
   </a>
   <a href="https://instagram.com/19adarshh">
