@@ -332,7 +332,7 @@ const SyntheticHero = ({
 					{microDetails.length > 0 && (
 						<ul
 							ref={microRef}
-							className="mt-16 flex flex-wrap justify-center gap-12 text-[13px] font-normal tracking-tight text-sky-100/60 leading-[1.4]"
+							className="hidden md:flex mt-16 flex-wrap justify-center gap-12 text-[13px] font-normal tracking-tight text-sky-100/60 leading-[1.4]"
 						>
 							{microDetails.map((detail, index) => (
 								<li key={index} className="flex items-center gap-2">
