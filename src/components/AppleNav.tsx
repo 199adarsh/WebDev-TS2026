@@ -67,7 +67,7 @@ export function AppleLiquidGlassNav() {
       </nav>
 
       {/* ================= Mobile Bottom Dock ================= */}
-      <nav className="md:hidden fixed bottom-[10%] left-1/2 -translate-x-1/2 z-[9999] w-[50%] max-w-xs">
+      <nav className="md:hidden fixed bottom-[5%] left-1/2 -translate-x-1/2 z-[9999] w-[50%] max-w-xs">
         <div
           className="
             w-full flex items-center justify-around
