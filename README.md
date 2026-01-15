@@ -1,62 +1,93 @@
-# React TypeScript App
+# 🎉 Tech Symposium 2026 – Event Registration Portal (Frontend)
 
-A modern React application built with TypeScript, Vite, and TailwindCSS.
+A modern, responsive **frontend-only** event registration interface designed for the National Level Tech Symposium 2026 organized by DKTE.
 
-## Features
+---
 
-- ⚡ **Vite** - Instant hot reloading and optimized builds
-- 🔷 **TypeScript** - Type-safe development
-- 🎨 **TailwindCSS** - Modern utility-first CSS framework
-- 🧩 **Lucide React** - Beautiful icons
-- 🛠️ **ESLint** - Code quality and consistency
+## ✨ Features
+- 📱 Fully responsive UI
+- 🎨 Modern glassmorphism design
+- ⚡ Fast and lightweight frontend
+- 🧭 Easy navigation
+- 📝 Interactive registration forms
 
-## Getting Started
+---
 
-### Prerequisites
+## 🛠 Tech Stack
 
-Make sure you have Node.js installed (version 16 or higher).
+<p align="left">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" width="40"/>
+</p>
 
-### Installation
 
-1. Install dependencies:
-```bash
-npm install
-```
+---
 
-2. Start the development server:
-```bash
-npm run dev
-```
+## 🏷 Badges
 
-3. Open your browser and navigate to `http://localhost:5173`
+![Frontend](https://img.shields.io/badge/Frontend-Only-blue)
+![Responsive](https://img.shields.io/badge/Responsive-Yes-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Made with Love](https://img.shields.io/badge/Made%20With-Love-red)
 
-## Available Scripts
+---
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+## 🚀 Demo
 
-## Project Structure
+🔗 Live Demo: _Coming Soon_
 
-```
-src/
-├── components/    # Reusable components
-├── lib/          # Utility functions
-├── App.tsx       # Main application component
-├── main.tsx      # Application entry point
-└── index.css     # Global styles
-```
+---
 
-## Technologies Used
+## 📸 Screenshots
 
-- **React 18** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **TailwindCSS** - CSS framework
-- **Lucide React** - Icon library
-- **ESLint** - Linting
+| Home Page | Event Listing |
+|----------|---------------|
+| ![Home](https://via.placeholder.com/400x250?text=Home+Page) | ![Events](https://via.placeholder.com/400x250?text=Event+Listing) |
 
-## License
+| Registration Form | Mobile View |
+|-------------------|-------------|
+| ![Form](https://via.placeholder.com/400x250?text=Registration+Form) | ![Mobile](https://via.placeholder.com/400x250?text=Mobile+View) |
 
-MIT
+---
+
+## 📖 Usage
+
+Users can explore available events, view detailed descriptions, and complete registrations through an intuitive and visually appealing frontend interface optimized for all devices.
+
+---
+
+## 👨‍💻 Author
+
+**Adarsh Herwade**  
+Frontend Developer  
+
+<p align="left">
+  <a href="https://github.com/199adarsh">
+    <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg" width="30"/>
+  </a>
+  <a href="https://linkedin.com">
+    <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linkedin.svg" width="30"/>
+  </a>
+  <a href="https://instagram.com/19adarshh">
+    <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg" width="30"/>
+  </a>
+</p>
+
+
+---
+
+## ❤️ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
+
+## 📜 License
+
+This project is licensed for educational and event purposes.
+
