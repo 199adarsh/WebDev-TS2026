@@ -270,7 +270,7 @@ const SyntheticHero = ({
 
 					<h1
 						ref={headingRef}
-						className="text-4xl md:text-5xl lg:text-6xl max-w-5xl font-light tracking-[-0.02em] text-white mb-4 leading-[1.05] text-balance mx-auto"
+						className="text-5xl md:text-5xl lg:text-6xl max-w-5xl font-light tracking-[-0.02em] text-white mb-2 leading-[1.05] text-balance mx-auto"
 						style={{
 							fontVariationSettings: '"wght" 700',
 							fontWeight: 700,
@@ -281,7 +281,7 @@ const SyntheticHero = ({
 
 					<p
 						ref={paragraphRef}
-						className="text-sky-50 text-base md:text-lg max-w-3xl mx-auto mt-4 mb-8 font-normal leading-[1.6] text-balance"
+						className="text-sky-50 text-sm md:text-lg max-w-3xl mx-auto mt-2 mb-8 font-normal leading-[1.6] text-balance"
 						style={{
 							fontVariationSettings: '"wght" 400',
 							opacity: 0.8,
