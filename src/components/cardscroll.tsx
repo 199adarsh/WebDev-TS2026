@@ -144,6 +144,7 @@ const StickyCard002 = ({
 
       if (!imageElements[0]) return;
 
+      // Set initial states with smooth entrance
       gsap.set(imageElements[0], { y: "0%", scale: 1, rotation: 0 });
 
       for (let i = 1; i < totalCards; i++) {
@@ -151,14 +152,21 @@ const StickyCard002 = ({
         gsap.set(imageElements[i], { y: "100%", scale: 1, rotation: 0 });
       }
 
+      // Smooth entrance animation
+      gsap.fromTo(imageElements[0], 
+        { opacity: 0, scale: 0.9 },
+        { opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
+      );
+
       const scrollTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: ".sticky-cards",
           start: "top top",
           end: `+=${window.innerHeight * (totalCards - 1)}`,
           pin: true,
-          scrub: 0.5,
+          scrub: 0.3, // Balanced for smoothness and responsiveness
           pinSpacing: true,
+          invalidateOnRefresh: true,
         },
       });
 
@@ -168,13 +176,14 @@ const StickyCard002 = ({
         const position = i;
         if (!currentImage || !nextImage) continue;
 
+        // Smoother animations with better easing
         scrollTimeline.to(
           currentImage,
           {
-            scale: 0.7,
-            rotation: 5,
-            duration: 1,
-            ease: "none",
+            scale: 0.85,
+            rotation: 4,
+            duration: 1.2,
+            ease: "power2.inOut", // Smoother easing for natural feel
           },
           position,
         );
@@ -183,15 +192,20 @@ const StickyCard002 = ({
           nextImage,
           {
             y: "0%",
-            duration: 1,
-            ease: "none",
+            duration: 1.2,
+            ease: "power2.inOut", // Smoother easing for natural feel
           },
           position,
         );
       }
 
+      // Debounced resize handler for better performance
+      let resizeTimeout: NodeJS.Timeout;
       const resizeObserver = new ResizeObserver(() => {
-        ScrollTrigger.refresh();
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 200);
       });
 
       if (container.current) {
@@ -199,6 +213,7 @@ const StickyCard002 = ({
       }
 
       return () => {
+        clearTimeout(resizeTimeout);
         resizeObserver.disconnect();
         scrollTimeline.kill();
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -294,7 +309,21 @@ const Skiper17 = () => {
   ];
 
   return (
-    <ReactLenis root>
+    <ReactLenis 
+      root
+      options={{
+        duration: 1.5, // Longer duration for smoother feel
+        easing: (t) => {
+          // Custom smooth easing function
+          return t < 0.5 
+            ? 2 * t * t 
+            : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        },
+        wheelMultiplier: 1.2, // Slightly more responsive
+        touchMultiplier: 1.5,
+        infinite: false,
+      }}
+    >
       <div className="h-full w-full bg-black">
         <StickyCard002 cards={defaultCards} />
       </div>

@@ -9,25 +9,22 @@ type ProgressiveBlurProps = {
 
 const ProgressiveBlur = ({
   className = "",
-  backgroundColor = "#f5f4f3",
+  backgroundColor = "rgba(0,0,0,0.8)",
   position = "top",
   height = "150px",
-  blurAmount = "4px",
+  blurAmount = "8px",
 }: ProgressiveBlurProps) => {
   const isTop = position === "top";
 
   return (
     <div
-      className={`pointer-events-none absolute left-0 w-full select-none ${className}`}
+      className={`pointer-events-none absolute left-0 right-0 select-none ${className}`}
       style={{
         [isTop ? "top" : "bottom"]: 0,
         height,
         background: isTop
-          ? `linear-gradient(to top, transparent, ${backgroundColor})`
-          : `linear-gradient(to bottom, transparent, ${backgroundColor})`,
-        maskImage: isTop
-          ? `linear-gradient(to bottom, ${backgroundColor} 50%, transparent)`
-          : `linear-gradient(to top, ${backgroundColor} 50%, transparent)`,
+          ? `linear-gradient(to ${isTop ? 'top' : 'bottom'}, ${backgroundColor}, transparent)`
+          : `linear-gradient(to ${isTop ? 'top' : 'bottom'}, ${backgroundColor}, transparent)`,
         WebkitBackdropFilter: `blur(${blurAmount})`,
         backdropFilter: `blur(${blurAmount})`,
         WebkitUserSelect: "none",
