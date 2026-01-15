@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .glass-morphism-strong {
+    backdrop-filter: blur(24px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .shadow-glow {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+  }
+  .shadow-glow-strong {
+    box-shadow: 0 0 60px rgba(16, 185, 129, 0.5);
+  }
+  
+  /* True Apple Glass Styles */
+  .apple-glass {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.16),
+      rgba(255,255,255,0.06)
+    );
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.25),
+      0 8px 24px rgba(0,0,0,0.18);
+    transition: all 0.35s ease;
+  }
+
+  .apple-glass:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.20),
+      rgba(255,255,255,0.10)
+    );
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  /* Softer Apple Glass for Buttons */
+  .apple-glass-button {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.04)
+    );
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.20);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.20),
+      0 6px 20px rgba(0,0,0,0.15);
+    transition: all 0.35s ease;
+  }
+
+  .apple-glass-button:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.16),
+      rgba(255,255,255,0.08)
+    );
+    transform: translateY(-1px) scale(1.01);
+  }
+
+  /* Soft Apple Glass for Badge */
+  .apple-glass-badge {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.02)
+    );
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.15),
+      0 4px 16px rgba(0,0,0,0.12);
+    transition: all 0.35s ease;
+  }
+
+  .apple-glass-badge:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.04)
+    );
+    transform: translateY(-0.5px);
+  }
+
+  .liquid-glass-primary {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.20),
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0.05)
+    );
+    backdrop-filter: blur(32px) saturate(140%);
+    -webkit-backdrop-filter: blur(32px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    box-shadow:
+      0 0 0 0.5px rgba(255, 255, 255, 0.25),
+      0 8px 30px rgba(0, 0, 0, 0.25),
+      inset 0 0 20px rgba(255, 255, 255, 0.03);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .liquid-glass-secondary {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.02)
+    );
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow:
+      0 0 0 0.5px rgba(255, 255, 255, 0.15),
+      0 6px 20px rgba(0, 0, 0, 0.15),
+      inset 0 0 20px rgba(255, 255, 255, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .liquid-glass-secondary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+}
