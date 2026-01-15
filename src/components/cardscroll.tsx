@@ -3,7 +3,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ReactLenis from "lenis/react";
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
@@ -142,21 +141,18 @@ const StickyCard002 = ({
       const imageElements = imageRefs.current;
       const totalCards = imageElements.length;
 
+      console.log('Total cards:', totalCards);
+      console.log('Image elements:', imageElements);
+
       if (!imageElements[0]) return;
 
-      // Set initial states with smooth entrance
-      gsap.set(imageElements[0], { y: "0%", scale: 1, rotation: 0 });
+      // Set initial states
+      gsap.set(imageElements[0], { y: "0%", scale: 1, rotation: 0, opacity: 1 });
 
       for (let i = 1; i < totalCards; i++) {
         if (!imageElements[i]) continue;
-        gsap.set(imageElements[i], { y: "100%", scale: 1, rotation: 0 });
+        gsap.set(imageElements[i], { y: "100%", scale: 1, rotation: 0, opacity: 1 });
       }
-
-      // Smooth entrance animation
-      gsap.fromTo(imageElements[0], 
-        { opacity: 0, scale: 0.9 },
-        { opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
-      );
 
       const scrollTimeline = gsap.timeline({
         scrollTrigger: {
@@ -164,7 +160,7 @@ const StickyCard002 = ({
           start: "top top",
           end: `+=${window.innerHeight * (totalCards - 1)}`,
           pin: true,
-          scrub: 0.3, // Balanced for smoothness and responsiveness
+          scrub: 0.2, // Reduced for faster response
           pinSpacing: true,
           invalidateOnRefresh: true,
         },
@@ -176,14 +172,14 @@ const StickyCard002 = ({
         const position = i;
         if (!currentImage || !nextImage) continue;
 
-        // Smoother animations with better easing
+        // Faster animations with less lag
         scrollTimeline.to(
           currentImage,
           {
             scale: 0.85,
-            rotation: 4,
-            duration: 1.2,
-            ease: "power2.inOut", // Smoother easing for natural feel
+            rotation: 3,
+            duration: 0.8,
+            ease: "power1.out", // Faster easing
           },
           position,
         );
@@ -192,8 +188,8 @@ const StickyCard002 = ({
           nextImage,
           {
             y: "0%",
-            duration: 1.2,
-            ease: "power2.inOut", // Smoother easing for natural feel
+            duration: 0.8,
+            ease: "power1.out", // Faster easing
           },
           position,
         );
@@ -224,50 +220,47 @@ const StickyCard002 = ({
 
   return (
     <div className={cn("relative h-full w-full bg-black", className)} ref={container}>
-      <div className="sticky-cards relative flex h-full w-full items-center justify-center overflow-hidden p-3 lg:p-8">
+      <div className="sticky-cards relative flex h-full w-full items-center justify-center overflow-hidden p-2 sm:p-4 lg:p-6">
         <div
           className={cn(
-            "relative h-[90%] w-full max-w-sm overflow-hidden rounded-3xl sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl bg-black",
+            "relative h-[80vh] w-[90vw] max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl overflow-hidden rounded-3xl bg-black mx-auto aspect-[9/16]",
             containerClassName,
           )}
         >
           {/* Shader background for first card */}
           {cards[0]?.background === "shader" && (
-            <div className="absolute inset-0 z-10 rounded-3xl overflow-hidden">
+            <div className="absolute inset-0 z-0 rounded-3xl overflow-hidden">
               <Canvas>
                 <ShaderPlane />
               </Canvas>
             </div>
           )}
           
-          {/* Black background overlay for cards with black background */}
-          {cards.map((card, i) => (
-            card.background === "black" && (
-              <div
-                key={`bg-${card.id}`}
-                className="absolute inset-0 z-10 bg-black rounded-3xl"
-                style={{ zIndex: 10 + i }}
-              />
-            )
-          ))}
+          {/* Black background for cards with black background */}
+          <div className="absolute inset-0 z-0 bg-black rounded-3xl" />
           
           {cards.map((card, i) => (
             <img
               key={card.id}
               src={card.image}
-              alt={card.alt || ""}
+              alt={card.alt || `Card ${i + 1}`}
               className={cn(
                 "rounded-3xl absolute h-full w-full object-cover",
                 imageClassName,
               )}
-              style={{ zIndex: 20 + i }}
+              style={{ zIndex: 10 + i }}
               ref={(el) => {
                 imageRefs.current[i] = el;
+                console.log(`Image ${i} ref set:`, el);
+              }}
+              onLoad={() => {
+                console.log(`Image ${i} loaded:`, card.image);
               }}
               onError={(e) => {
                 console.error(`Failed to load image: ${card.image}`);
                 // Try fallback to assets folder
                 const fallbackSrc = `/assets/IMG0${i + 1}.jpg`;
+                console.log(`Trying fallback: ${fallbackSrc}`);
                 (e.target as HTMLImageElement).src = fallbackSrc;
               }}
             />
@@ -309,42 +302,10 @@ const Skiper17 = () => {
   ];
 
   return (
-    <ReactLenis 
-      root
-      options={{
-        duration: 1.5, // Longer duration for smoother feel
-        easing: (t) => {
-          // Custom smooth easing function
-          return t < 0.5 
-            ? 2 * t * t 
-            : 1 - Math.pow(-2 * t + 2, 2) / 2;
-        },
-        wheelMultiplier: 1.2, // Slightly more responsive
-        touchMultiplier: 1.5,
-        infinite: false,
-      }}
-    >
-      <div className="h-full w-full bg-black">
-        <StickyCard002 cards={defaultCards} />
-      </div>
-    </ReactLenis>
+    <div className="h-full w-full bg-black">
+      <StickyCard002 cards={defaultCards} />
+    </div>
   );
 };
 
 export { Skiper17, StickyCard002 };
-
-/**
- * Skiper 17 StickyCard_002 — React + Gsap + scrollTrigger
- * We respect the original creators. This is an inspired rebuild with our own taste and does not claim any ownership.
- *
- * License & Usage:
- * - Free to use and modify in both personal and commercial projects.
- * - Attribution to Skiper UI is required when using the free version.
- * - No attribution required with Skiper UI Pro.
- *
- * Feedback and contributions are welcome.
- *
- * Author: @gurvinder-singh02
- * Website: https://gxuri.in
- * Twitter: https://x.com/Gur__vi
- */
