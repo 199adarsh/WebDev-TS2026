@@ -146,12 +146,26 @@ const StickyCard002 = ({
 
       if (!imageElements[0]) return;
 
-      // Set initial states
-      gsap.set(imageElements[0], { y: "0%", scale: 1, rotation: 0, opacity: 1 });
+      // Set initial states with different rotations for each card
+ // Different rotation for each card
+      
+      gsap.set(imageElements[0], { 
+        y: "0%", 
+        scale: 1, 
+        rotation: 0, 
+        opacity: 1,
+        transformOrigin: "center center"
+      });
 
       for (let i = 1; i < totalCards; i++) {
         if (!imageElements[i]) continue;
-        gsap.set(imageElements[i], { y: "100%", scale: 1, rotation: 0, opacity: 1 });
+        gsap.set(imageElements[i], { 
+          y: "100%", 
+          scale: 1, 
+          rotation:0 , 
+          opacity: 1,
+          transformOrigin: "center center"
+        });
       }
 
       const scrollTimeline = gsap.timeline({
@@ -160,7 +174,7 @@ const StickyCard002 = ({
           start: "top top",
           end: `+=${window.innerHeight * (totalCards - 1)}`,
           pin: true,
-          scrub: 0.2, // Reduced for faster response
+          scrub: 0.2,
           pinSpacing: true,
           invalidateOnRefresh: true,
         },
@@ -177,9 +191,9 @@ const StickyCard002 = ({
           currentImage,
           {
             scale: 0.85,
-            rotation: 3,
+             // Add more rotation during transition
             duration: 0.8,
-            ease: "power1.out", // Faster easing
+            ease: "power1.out",
           },
           position,
         );
@@ -188,8 +202,9 @@ const StickyCard002 = ({
           nextImage,
           {
             y: "0%",
+           // Set to its unique rotation
             duration: 0.8,
-            ease: "power1.out", // Faster easing
+            ease: "power1.out",
           },
           position,
         );
@@ -223,9 +238,10 @@ const StickyCard002 = ({
       <div className="sticky-cards relative flex h-full w-full items-center justify-center overflow-hidden p-2 sm:p-4 lg:p-6">
         <div
           className={cn(
-            "relative h-[80vh] w-[90vw] max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl overflow-hidden rounded-3xl bg-black mx-auto",
+            "relative h-[70vh] w-[85vw] sm:w-[80vw] md:w-[75vw] lg:w-[70vw] max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl overflow-hidden rounded-3xl bg-black mx-auto aspect-[3/4]",
             containerClassName,
           )}
+          style={{ transform: "translateY(0)" }}
         >
           {/* Shader background for first card */}
           {cards[0]?.background === "shader" && (
@@ -248,7 +264,11 @@ const StickyCard002 = ({
                 "rounded-3xl absolute h-full w-full object-cover",
                 imageClassName,
               )}
-              style={{ zIndex: 10 + i }}
+              style={{ 
+                zIndex: 10 + i,
+                top: "0%",
+                left: "0%"
+              }}
               ref={(el) => {
                 imageRefs.current[i] = el;
                 console.log(`Image ${i} ref set:`, el);

@@ -19,7 +19,7 @@ function App() {
       </div>
       
       {/* Sticky Card Scroll Section - Increased height for scrolling */}
-      <div className="relative mt-40 py-20">
+      <div className="relative mt-96 py-20">
         <Skiper17/>
       </div>
     </div>
