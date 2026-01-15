@@ -5,11 +5,11 @@ A modern, responsive **frontend-only** event registration interface designed for
 ---
 
 ## ✨ Features
-- 📱 Fully responsive UI
-- 🎨 Modern glassmorphism design
-- ⚡ Fast and lightweight frontend
-- 🧭 Easy navigation
-- 📝 Interactive registration forms
+- 📱 Fully responsive UI  
+- 🎨 Modern glassmorphism design  
+- ⚡ Fast and lightweight frontend  
+- 🧭 Easy navigation  
+- 📝 Interactive registration forms  
 
 ---
 
@@ -22,9 +22,8 @@ A modern, responsive **frontend-only** event registration interface designed for
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="40"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="40"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" width="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" width="40"/>
 </p>
-
 
 ---
 
@@ -68,16 +67,15 @@ Frontend Developer
 
 <p align="left">
   <a href="https://github.com/199adarsh">
-    <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg" width="30"/>
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="32"/>
   </a>
-  <a href="https://linkedin.com/adarsh-herwade">
-    <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linkedin.svg" width="30"/>
+  <a href="https://www.linkedin.com/in/adarsh-herwade">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg" width="32"/>
   </a>
-  <a href="https://instagram.com/19adarshh">
+ <a href="https://instagram.com/19adarshh">
     <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg" width="30"/>
   </a>
 </p>
-
 
 ---
 
@@ -90,4 +88,3 @@ If you like this project, give it a ⭐ on GitHub!
 ## 📜 License
 
 This project is licensed for educational and event purposes.
-
