@@ -223,7 +223,7 @@ const StickyCard002 = ({
       <div className="sticky-cards relative flex h-full w-full items-center justify-center overflow-hidden p-2 sm:p-4 lg:p-6">
         <div
           className={cn(
-            "relative h-[80vh] w-[90vw] max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl overflow-hidden rounded-3xl bg-black mx-auto aspect-[9/16]",
+            "relative h-[80vh] w-[90vw] max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl overflow-hidden rounded-3xl bg-black mx-auto",
             containerClassName,
           )}
         >
