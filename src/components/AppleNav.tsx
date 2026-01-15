@@ -49,7 +49,7 @@ export function AppleLiquidGlassNav() {
       </nav>
 
       {/* ================= Mobile Top Pill ================= */}
-      <nav className="md:hidden fixed top-4 left-1/2 -translate-x-1/2 z-[9999] w-[85%]">
+      <nav className="md:hidden fixed top-6 left-1/2 -translate-x-1/2 z-[9999] w-[85%]">
         <div
           className="
             w-full flex items-center justify-between
@@ -67,7 +67,7 @@ export function AppleLiquidGlassNav() {
       </nav>
 
       {/* ================= Mobile Bottom Dock ================= */}
-      <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] w-[50%] max-w-xs">
+      <nav className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-[9999] w-[50%] max-w-xs">
         <div
           className="
             w-full flex items-center justify-around
