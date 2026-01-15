@@ -65,39 +65,6 @@ export function AppleLiquidGlassNav() {
           </span>
         </div>
       </nav>
-
-      {/* ================= Mobile Bottom Dock ================= */}
-      <nav className="md:hidden fixed bottom-[5%] left-1/2 -translate-x-1/2 z-[9999] w-[50%] max-w-xs">
-        <div
-          className="
-            w-full flex items-center justify-around
-            px-2 py-1 rounded-full
-            apple-glass
-          "
-        >
-          {mobileItems.map((item, index) => {
-            const Icon = item.icon
-            const isActive = index === activeMobile
-
-            return (
-              <button
-                key={item.label}
-                onClick={() => setActiveMobile(index)}
-                className="
-                  relative p-3 rounded-full
-                  text-white/50 hover:text-white/80
-                  transition-all duration-350 ease active:scale-95
-                "
-              >
-                <Icon size={18} />
-                {isActive && (
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3.5 h-1.5 bg-white/50 rounded-full" />
-                )}
-              </button>
-            )
-          })}
-        </div>
-      </nav>
     </>
   )
 }
