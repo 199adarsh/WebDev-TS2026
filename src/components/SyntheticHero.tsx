@@ -270,7 +270,7 @@ const SyntheticHero = ({
 
 					<h1
 						ref={headingRef}
-						className="text-5xl md:text-5xl lg:text-6xl max-w-5xl font-light tracking-[-0.02em] text-white mb-2 leading-[1.05] text-balance mx-auto"
+						className="text-4xl md:text-5xl lg:text-6xl max-w-5xl font-light tracking-[-0.02em] text-white mb-2 leading-[1.05] text-balance mx-auto"
 						style={{
 							fontVariationSettings: '"wght" 700',
 							fontWeight: 700,
