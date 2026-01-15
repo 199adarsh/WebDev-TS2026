@@ -243,7 +243,7 @@ const SyntheticHero = ({
 	return (
 		<section
 			ref={sectionRef}
-			className="relative flex items-center justify-center min-h-screen overflow-hidden"
+			className="relative flex items-center justify-center min-h-screen md:min-h-screen overflow-hidden"
 		>
 			<div className="absolute inset-0 z-0">
 				<Canvas>
