@@ -32,9 +32,9 @@ const styles = `
     min-height: 80vh;
     background: #000000ff;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 120px;
     font-family: 'Space Grotesk', sans-serif;
     overflow-x: hidden;
     position: relative;
@@ -83,6 +83,7 @@ const styles = `
     color: #888;
     font-weight: 400;
     letter-spacing: -0.02em;
+    text-align: left;
   }
 
   .text-block p {

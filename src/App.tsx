@@ -3,6 +3,29 @@ import { AppleLiquidGlassNav } from './components/AppleNav'
 import { LiquidGlassDock } from './components/ui/liquid-glass-dock'
 import { HoverPreview } from "./components/ui/hover-preview"
 import { SmoothScroll } from "./components/ui/smooth-scroll"
+import { FeatureSteps } from "./components/ui/feature-section"
+
+
+const features = [
+  { 
+    step: 'Step 1', 
+    title: 'Discover Your Strengths',
+    content: 'Explore both technical and creative challenges that match your skills.', 
+    image: 'https://images.unsplash.com/photo-1723958929247-ef054b525153?q=80&w=2070&auto=format&fit=crop' 
+  },
+  { 
+    step: 'Step 2',
+    title: 'Compete & Collaborate',
+    content: 'Test your limits in high-impact tech and non-tech competitions.',
+    image: 'https://images.unsplash.com/photo-1723931464622-b7df7c71e380?q=80&w=2070&auto=format&fit=crop'
+  },
+  { 
+    step: 'Step 3',
+    title: 'Rise & Create Impact',
+    content: 'Elevate your career with real-world experience, confidence, and recognition.',
+    image: 'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop'
+  },
+]
 
 function App() {
 
@@ -27,8 +50,16 @@ function App() {
           eyebrow="A National Level Event"
         />
 
-      <HoverPreview />
 
+      <FeatureSteps 
+        features={features}
+        title="YOUR JOURNEY STARTS HERE"
+        autoPlayInterval={4000}
+        imageHeight="h-[600px]"
+      />
+
+      
+      <HoverPreview />
       
     
     </div>
