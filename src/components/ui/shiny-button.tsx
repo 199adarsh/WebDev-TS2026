@@ -124,7 +124,6 @@ export function ShinyButton({ children, onClick, className = "" }: ShinyButtonPr
 
         /* Inner shimmer */
         .shiny-cta::after {
-          --animation: shimmer linear infinite;
           width: 100%;
           aspect-ratio: 1;
           background: linear-gradient(
@@ -148,16 +147,13 @@ export function ShinyButton({ children, onClick, className = "" }: ShinyButtonPr
           box-shadow: inset 0 -1ex 2rem 4px var(--shiny-cta-highlight);
           opacity: 0;
           transition: opacity var(--transition);
-          animation: calc(var(--duration) * 1.5) breathe linear infinite;
         }
 
-        /* Animate */
+        /* Static button */
         .shiny-cta,
         .shiny-cta::before,
         .shiny-cta::after {
-          animation: var(--animation) var(--duration),
-            var(--animation) calc(var(--duration) / 0.4) reverse paused;
-          animation-composition: add;
+          /* No animations */
         }
 
         .shiny-cta:is(:hover, :focus-visible) {

@@ -84,23 +84,7 @@ const styles = `
 
   .text-block p {
     margin-bottom: 1.5em;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards;
-  }
-
-  .text-block p:nth-child(1) { animation-delay: 0.2s; }
-  .text-block p:nth-child(2) { animation-delay: 0.4s; }
-  .text-block p:nth-child(3) { animation-delay: 0.6s; }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    opacity: 1;
   }
 
   .hover-link {

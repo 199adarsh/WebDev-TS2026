@@ -76,15 +76,15 @@ const clubs = [
   {
     title: "CS Club",
     items: [
-      { name: "Code Quest", type: "Tech" as const, icon: "💻", href: "#" },
-      { name: "Debug Masters", type: "Tech" as const, icon: "🔧", href: "#" },
+      { name: "Code..", type: "Tech" as const, icon: "💻", href: "#" },
+      { name: "Debug..", type: "Tech" as const, icon: "🔧", href: "#" },
     ],
   },
   {
     title: "ML Club",
     items: [
-      { name: "Model Mayhem", type: "Tech" as const, icon: "🤖", href: "#" },
-      { name: "Data Duel", type: "Tech" as const, icon: "📊", href: "#" },
+      { name: "MLMas..", type: "Tech" as const, icon: "🤖", href: "#" },
+      { name: "DataDuel", type: "Tech" as const, icon: "📊", href: "#" },
     ],
   },
   {
@@ -97,22 +97,22 @@ const clubs = [
   {
     title: "MECH Club",
     items: [
-      { name: "Mechathon", type: "Tech" as const, icon: "⚙️", href: "#" },
-      { name: "Gear Up", type: "Non-Tech" as const, icon: "🔧", href: "#" },
+      { name: "Mechat..", type: "Tech" as const, icon: "⚙️", href: "#" },
+      { name: "GearUp", type: "Non-Tech" as const, icon: "🔧", href: "#" },
     ],
   },
   {
     title: "ETC Club",
     items: [
-      { name: "Circuit Design", type: "Tech" as const, icon: "⚡", href: "#" },
-      { name: "PCB Workshop", type: "Tech" as const, icon: "🔌", href: "#" },
+      { name: "Circuit..", type: "Tech" as const, icon: "⚡", href: "#" },
+      { name: "Worksh..", type: "Tech" as const, icon: "🔌", href: "#" },
     ],
   },
   {
     title: "ENTC Club",
     items: [
-      { name: "Robo Relay", type: "Tech" as const, icon: "🤖", href: "#" },
-      { name: "Tech Takedown", type: "Tech" as const, icon: "⚡", href: "#" },
+      { name: "RoboRa..", type: "Tech" as const, icon: "🤖", href: "#" },
+      { name: "TechTak", type: "Tech" as const, icon: "⚡", href: "#" },
     ],
   },
   {
