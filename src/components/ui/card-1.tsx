@@ -76,43 +76,42 @@ const clubs = [
   {
     title: "CS Club",
     items: [
-      { name: "Code Quest", type: "Tech", icon: "💻", href: "#" },
-      { name: "Debug Masters", type: "Tech", icon: "�", href: "#" },
+      { name: "Code Quest", type: "Tech" as const, icon: "💻", href: "#" },
+      { name: "Debug Masters", type: "Tech" as const, icon: "🔧", href: "#" },
     ],
   },
   {
     title: "ML Club",
     items: [
-      { name: "Model Mayhem", type: "Tech", icon: "🤖", href: "#" },
-      { name: "Data Duel", type: "Tech", icon: "📊", href: "#" },
+      { name: "Model Mayhem", type: "Tech" as const, icon: "🤖", href: "#" },
+      { name: "Data Duel", type: "Tech" as const, icon: "📊", href: "#" },
     ],
   },
   {
     title: "AIDS Club",
     items: [
-      { name: "AI Arena", type: "Tech", icon: "🧠", href: "#" },
-      { name: "InsightX", type: "Tech", icon: "📈", href: "#" },
+      { name: "AI Arena", type: "Tech" as const, icon: "🧠", href: "#" },
+      { name: "InsightX", type: "Tech" as const, icon: "📈", href: "#" },
     ],
   },
   {
     title: "MECH Club",
     items: [
-      { name: "Mechathon", type: "Tech", icon: "⚙️", href: "#" },
-      { name: "Gear Up", type: "Non-Tech", icon: "🔧", href: "#" },
+      { name: "Mechathon", type: "Tech" as const, icon: "⚙️", href: "#" },
+      { name: "Gear Up", type: "Non-Tech" as const, icon: "🔧", href: "#" },
     ],
   },
   {
     title: "ETC Club",
     items: [
-      { name: "Circuit Design", type: "Tech", icon: "⚡", href: "#" },
-      { name: "PCB Workshop", type: "Tech", icon: "�", href: "#" },
+      { name: "Circuit Design", type: "Tech" as const, icon: "⚡", href: "#" },
+      { name: "PCB Workshop", type: "Tech" as const, icon: "🔌", href: "#" },
     ],
   },
   {
     title: "ENTC Club",
     items: [
-      { name: "Robo Relay", type: "Tech", icon: "🤖", href: "#" },
-      { name: "Tech Takedown", type: "Tech", icon: "⚡", href: "#" },
+      { name: "Robo Relay", type: "Tech" as const, icon: "🤖", href: "#" },
       { name: "Tech Takedown", type: "Tech" as const, icon: "⚡", href: "#" },
     ],
   },
