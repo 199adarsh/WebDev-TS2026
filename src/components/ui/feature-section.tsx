@@ -21,7 +21,7 @@ interface FeatureStepsProps {
 export function FeatureSteps({
   features,
   className,
-  title = "How to get Started",
+  title = "WHY PARTICIPATE IN TECH SYMPOSIUM",
   autoPlayInterval = 3000,
   imageHeight = "h-[400px]",
 }: FeatureStepsProps) {
@@ -93,7 +93,7 @@ export function FeatureSteps({
                   index === currentFeature && (
                     <motion.div
                       key={index}
-                      className="absolute inset-0 rounded-lg overflow-hidden"
+                      className="absolute inset-0 rounded-lg overflow-hidden flex items-center justify-center"
                       initial={{ y: 100, opacity: 0, rotateX: -20 }}
                       animate={{ y: 0, opacity: 1, rotateX: 0 }}
                       exit={{ y: -100, opacity: 0, rotateX: 20 }}
@@ -102,7 +102,7 @@ export function FeatureSteps({
                       <img
                         src={feature.image}
                         alt={feature.step}
-                        className="w-full h-full object-cover transition-transform transform rounded-[30px]"
+                        className="w-full h-[200px] object-cover transition-transform transform rounded-[30px] mb-[-100px] md:w-full md:h-full"
                       />
                       <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black via-black/50 to-transparent" />
                     </motion.div>

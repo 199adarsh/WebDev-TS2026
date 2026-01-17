@@ -4,8 +4,10 @@ import { LiquidGlassDock } from './components/ui/liquid-glass-dock'
 import { HoverPreview } from "./components/ui/hover-preview"
 import { SmoothScroll } from "./components/ui/smooth-scroll"
 import { FeatureSteps } from "./components/ui/feature-section"
+import ClubCardsDemo from "./components/ui/card-1";
 
 
+//YOUR JOURNEY STARTS HERE
 const features = [
   { 
     step: 'Step 1', 
@@ -26,6 +28,7 @@ const features = [
     image: 'https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=2070&auto=format&fit=crop'
   },
 ]
+
 
 function App() {
 
@@ -53,13 +56,18 @@ function App() {
 
       <FeatureSteps 
         features={features}
-        title="YOUR JOURNEY STARTS HERE"
         autoPlayInterval={4000}
-        imageHeight="h-[600px]"
       />
 
       
       <HoverPreview />
+      
+      <div className="bg-black mt-20">
+       
+        <ClubCardsDemo />
+        
+      </div>
+      
       
     
     </div>

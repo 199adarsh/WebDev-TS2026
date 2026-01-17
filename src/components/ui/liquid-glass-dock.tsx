@@ -32,7 +32,7 @@ type LiquidGlassDockProps = {
  */
 export const LiquidGlassDock = ({
   items = defaultNavItems,
-  defaultActiveIndex = 1, // Start on middle icon (Events)
+  defaultActiveIndex = 0, // Start on Home icon
   onTabChange,
   className,
   limelightClassName,
@@ -54,11 +54,26 @@ export const LiquidGlassDock = ({
       const newLeft = activeItem.offsetLeft + activeItem.offsetWidth / 2 - limelight.offsetWidth / 2;
       limelight.style.left = `${newLeft}px`;
 
+      // Always set isReady to true after positioning
       if (!isReady) {
         setTimeout(() => setIsReady(true), 50);
       }
     }
   }, [activeIndex, isReady, items]);
+
+  // Initial positioning on mount
+  useLayoutEffect(() => {
+    if (items.length === 0) return;
+
+    const limelight = limelightRef.current;
+    const activeItem = navItemRefs.current[defaultActiveIndex];
+    
+    if (limelight && activeItem) {
+      const newLeft = activeItem.offsetLeft + activeItem.offsetWidth / 2 - limelight.offsetWidth / 2;
+      limelight.style.left = `${newLeft}px`;
+      setTimeout(() => setIsReady(true), 100);
+    }
+  }, [defaultActiveIndex, items.length]);
 
   if (items.length === 0) {
     return null; 

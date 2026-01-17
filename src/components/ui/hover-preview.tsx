@@ -29,15 +29,30 @@ const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syne:wght@400;700;800&display=swap');
 
   .hover-preview-container {
-    min-height: 80vh;
+    min-height: 50vh;
     background: #000000ff;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-left: 120px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     font-family: 'Space Grotesk', sans-serif;
     overflow-x: hidden;
     position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .hover-preview-container {
+      padding-left: 4rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hover-preview-container {
+      padding-left: 120px;
+      padding-right: 2rem;
+    }
   }
 
   .hover-preview-container::before {
@@ -160,14 +175,20 @@ const styles = `
   }
 
   .preview-card img {
-    width: 280px;
+    width: 200px;
     height: auto;
     border-radius: 10px;
     display: block;
   }
 
+  @media (max-width: 480px) {
+    .preview-card img {
+      width: 160px;
+    }
+  }
+
   .preview-card-title {
-    padding: 12px 8px 8px;
+    padding: 8px 6px 4px;
     font-size: 0.85rem;
     color: #fff;
     font-weight: 600;
@@ -175,7 +196,7 @@ const styles = `
   }
 
   .preview-card-subtitle {
-    padding: 0 8px 8px;
+    padding: 0 6px 6px;
     font-size: 0.75rem;
     color: #666;
   }
