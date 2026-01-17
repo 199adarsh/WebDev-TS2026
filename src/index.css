@@ -16,6 +16,14 @@
   html, #root {
     background-color: #000000;
   }
+  :root {
+    --gradient-color: #8350e8;
+    --sparkles-color: #8350e8;
+  }
+  .dark {
+    --gradient-color: #8350e8;
+    --sparkles-color: #ffffff;
+  }
 }
 
 @layer utilities {
@@ -154,5 +162,17 @@
   .liquid-glass-secondary:hover {
     filter: brightness(1.1);
     transform: translateY(-1px);
+  }
+}
+
+
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #000000;
+    color: #ffffff;
   }
 }

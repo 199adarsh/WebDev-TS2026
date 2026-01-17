@@ -32,7 +32,7 @@ type LiquidGlassDockProps = {
  */
 export const LiquidGlassDock = ({
   items = defaultNavItems,
-  defaultActiveIndex = 0,
+  defaultActiveIndex = 1, // Start on middle icon (Events)
   onTabChange,
   className,
   limelightClassName,

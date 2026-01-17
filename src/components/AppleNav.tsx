@@ -23,10 +23,10 @@ export function AppleLiquidGlassNav() {
           className="
             w-full flex items-center justify-between
             px-6 py-3.5 rounded-full
-            apple-glass
+            apple-glass backdrop-blur-lg opacity-80
           "
         >
-          <span className="text-[15px] font-semibold tracking-tight text-white/95">
+          <span className="text-[15px] font-semibold tracking-tight text-white/70">
             TECH SYMPOSIUM 2026
           </span>
 
@@ -37,8 +37,8 @@ export function AppleLiquidGlassNav() {
                 href="#"
                 className="
                   text-[15px] font-semibold tracking-tight
-                  text-white/60 hover:text-white/90
-                  transition-all duration-350 ease hover:translate-y-[-0.5px]
+                  text-white/40 hover:text-white/60
+                  transition-all duration-500 ease hover:translate-y-[-0.5px]
                 "
               >
                 {item}
