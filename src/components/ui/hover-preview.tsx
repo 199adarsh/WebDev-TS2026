@@ -68,25 +68,6 @@ const styles = `
     z-index: 9999;
   }
 
-  .ambient-glow {
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 107, 107, 0.08) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: pulse 8s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
-  }
-
   .content-container {
     max-width: 900px;
     width: 100%;
@@ -152,14 +133,11 @@ const styles = `
     pointer-events: none;
     z-index: 1000;
     opacity: 0;
-    transform: translateY(10px) scale(0.95);
-    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    will-change: transform, opacity;
+    transition: opacity 0.2s ease;
   }
 
   .preview-card.visible {
     opacity: 1;
-    transform: translateY(0) scale(1);
   }
 
   .preview-card-inner {
@@ -343,8 +321,6 @@ export function HoverPreview() {
     <>
       <style>{styles}</style>
       <div className="hover-preview-container">
-        <div className="ambient-glow" />
-
        <div className="content-container">
   <div className="text-block">
     <p>
