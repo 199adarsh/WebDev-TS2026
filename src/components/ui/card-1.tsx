@@ -25,15 +25,6 @@ const ClubCard = ({ title, items }: ClubCardProps) => {
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 120, damping: 12 },
-    },
-  };
-
   return (
     <motion.section
       initial="hidden"
@@ -50,9 +41,9 @@ const ClubCard = ({ title, items }: ClubCardProps) => {
       </div>
 
       {/* Pills */}
-      <motion.ul className="grid grid-cols-2 gap-3" variants={containerVariants}>
+      <ul className="grid grid-cols-2 gap-3">
         {items.map((item) => (
-          <motion.li key={item.name} variants={itemVariants}>
+          <li key={item.name}>
             <a
               href={item.href}
               className="flex items-center gap-2 rounded-full w-full h-[52px] border border-white/10 bg-black/50 px-3 transition-all hover:bg-black/70"
@@ -72,9 +63,9 @@ const ClubCard = ({ title, items }: ClubCardProps) => {
                 </span>
               </div>
             </a>
-          </motion.li>
+          </li>
         ))}
-      </motion.ul>
+      </ul>
     </motion.section>
   );
 };
@@ -85,8 +76,8 @@ const clubs = [
   {
     title: "CS Club",
     items: [
-      { name: "Code Conquest", type: "Tech", icon: "💻", href: "#" },
-      { name: "Bug Bounty", type: "Tech", icon: "🐞", href: "#" },
+      { name: "Code Quest", type: "Tech", icon: "💻", href: "#" },
+      { name: "Debug Masters", type: "Tech", icon: "�", href: "#" },
     ],
   },
   {
@@ -113,8 +104,8 @@ const clubs = [
   {
     title: "ETC Club",
     items: [
-      { name: "Circuit Clash", type: "Tech", icon: "🔌", href: "#" },
-      { name: "Signal Sprint", type: "Tech", icon: "📡", href: "#" },
+      { name: "Circuit Design", type: "Tech", icon: "⚡", href: "#" },
+      { name: "PCB Workshop", type: "Tech", icon: "�", href: "#" },
     ],
   },
   {
@@ -122,13 +113,14 @@ const clubs = [
     items: [
       { name: "Robo Relay", type: "Tech", icon: "🤖", href: "#" },
       { name: "Tech Takedown", type: "Tech", icon: "⚡", href: "#" },
+      { name: "Tech Takedown", type: "Tech" as const, icon: "⚡", href: "#" },
     ],
   },
   {
     title: "Civil Club",
     items: [
-      { name: "Structura", type: "Tech", icon: "🏗️", href: "#" },
-      { name: "EcoBuild", type: "Non-Tech", icon: "🌱", href: "#" },
+      { name: "Structura", type: "Tech" as const, icon: "🏗️", href: "#" },
+      { name: "EcoBuild", type: "Non-Tech" as const, icon: "🌱", href: "#" },
     ],
   },
 ];
