@@ -7,13 +7,13 @@ const previewData = {
 engineering: {
   image: "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=560&h=320&fit=crop",
   title: "Engineering",
-  subtitle: "Crafting solutions for real-world challenges",
+  subtitle: "Crafting real-world solutions",
 },
 
 innovation: {
   image: "https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=560&h=320&fit=crop",
   title: "Innovation",
-  subtitle: "Where ideas evolve into breakthroughs",
+  subtitle: "Ideas evolve into breakthroughs",
 },
 
 future: {
