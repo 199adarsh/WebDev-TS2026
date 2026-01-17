@@ -1,20 +1,8 @@
 "use client"
 
-import { useState } from "react"
-import { Home, Calendar, Users, Code } from "lucide-react"
-
 const desktopItems = ["Events", "Sponsors", "Developers", "Register"]
 
-const mobileItems = [
-  { label: "Home", icon: Home },
-  { label: "Events", icon: Calendar },
-  { label: "Sponsors", icon: Users },
-  { label: "Devs", icon: Code },
-]
-
-export function AppleLiquidGlassNav() {
-  const [activeMobile, setActiveMobile] = useState(1)
-
+export const AppleLiquidGlassNav = () => {
   return (
     <>
       {/* ================= Desktop ================= */}
@@ -61,7 +49,7 @@ export function AppleLiquidGlassNav() {
             TECH SYMPOSIUM 2026
           </span>
           <span className="text-[13px] font-semibold tracking-tight text-white/50">
-            {mobileItems[activeMobile].label}
+            Menu
           </span>
         </div>
       </nav>

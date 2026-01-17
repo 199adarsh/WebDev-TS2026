@@ -224,7 +224,7 @@ const PreviewCard = ({
 
   return (
     <div
-      ref={cardRef}
+      ref={cardRef as React.Ref<HTMLDivElement>}
       className={`preview-card ${isVisible ? "visible" : ""}`}
       style={{
         left: `${position.x}px`,
@@ -263,7 +263,6 @@ export function HoverPreview() {
   const updatePosition = useCallback((e: React.MouseEvent | React.TouchEvent | MouseEvent | TouchEvent) => {
     const cardWidth = 300
     const cardHeight = 250 // Approximate card height
-    const offsetX = 15
     const offsetY = 20 // Gap between cursor and card bottom
 
     // Get coordinates from both mouse and touch events
