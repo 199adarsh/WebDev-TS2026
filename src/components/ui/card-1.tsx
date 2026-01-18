@@ -20,8 +20,8 @@ const ClubCard = ({ items }: ClubCardProps) => {
     <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
       {items.map((item) => (
         <li key={item.name}>
-          <div className="flex items-center gap-4 rounded-full w-full h-[64px] border border-red-500/30 bg-black/40 backdrop-blur-md px-6 transition-all duration-300 hover:scale-105 hover:bg-red-500/20">
-            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm">
+          <div className="flex items-center gap-4 rounded-full w-full h-[64px] border border-white/20 bg-white/5 backdrop-blur-md px-6 transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/30">
+            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
               {item.icon}
             </span>
 
