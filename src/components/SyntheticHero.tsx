@@ -28,7 +28,7 @@ export function Hero({
       <div className="absolute inset-0 z-0">
         {/* Base background */}
         <img 
-          src="/src/assets/BG03.png" 
+          src="/assets/BG03.png" 
           alt="Background" 
           className="w-full h-full object-cover"
         />

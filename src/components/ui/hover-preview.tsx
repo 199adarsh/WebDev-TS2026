@@ -41,9 +41,6 @@ future: {
 }
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Canela:wght@300;400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-
   .hover-preview-container {
     min-height: 50vh;
     background: #000000ff;
@@ -78,8 +75,15 @@ const styles = `
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    opacity: 0.03;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 1px,
+        rgba(255, 255, 255, 0.01) 1px,
+        rgba(255, 255, 255, 0.01) 2px
+      );
+    opacity: 0.5;
     pointer-events: none;
     z-index: 9999;
   }
@@ -90,7 +94,7 @@ const styles = `
   }
 
   .text-block {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1rem, 3vw, 2rem);
     line-height: 1.6;
     color: #6b7280;
     font-weight: 400;
