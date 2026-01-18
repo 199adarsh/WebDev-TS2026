@@ -4,32 +4,38 @@ import type React from "react"
 import { useState, useCallback, useRef, useEffect } from "react"
 
 const previewData = {
+
 engineering: {
-  image: "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=560&h=320&fit=crop",
+  image: "https://images.pexels.com/photos/9242852/pexels-photo-9242852.jpeg",
   title: "Engineering",
-  subtitle: "Crafting real-world solutions",
+  subtitle: "Hands shaping ideas into reality",
+},
+
+ambition: {
+  image: "https://images.pexels.com/photos/6250946/pexels-photo-6250946.jpeg",
+  title: "Ambition",
+  subtitle: "Beyond every boundary",
+},
+
+limits: {
+  image: "https://images.pexels.com/photos/29022334/pexels-photo-29022334.jpeg",
+  title: "Vision",
+  subtitle: "Looking ahead into the vast unknown",
 },
 
 innovation: {
-  image: "https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=560&h=320&fit=crop",
+  image: "https://images.pexels.com/photos/8294591/pexels-photo-8294591.jpeg",
   title: "Innovation",
-  subtitle: "Ideas evolve into breakthroughs",
+  subtitle: "Where intelligence meets possibility",
 },
-limits: {
-  image: "https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=560&h=320&fit=crop",
-  title: "Limits",
-  subtitle: "Pushing boundaries to new heights",
-},
-ambition: {
-  image: "https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=560&h=320&fit=crop",
-  title: "Ambition",
-  subtitle: "Pushing boundaries to new heights",
-},
+
 future: {
-  image: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=560&h=320&fit=crop",
-  title: "The Future",
-  subtitle: "Exploring what lies beyond",
+  image: "https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871.jpeg?w=1260&h=620&auto=compress&cs=tinysrgb&fit=cover",
+  title: "Future",
+  subtitle: "Where intelligence meets possibility",
 },
+
+
 
 
 }
