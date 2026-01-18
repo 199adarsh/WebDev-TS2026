@@ -44,7 +44,7 @@ export function FeatureSteps({
   return (
     <div className={`p-8 md:p-12 ${className}`}>
       <div className="max-w-7xl mx-auto w-full mt-20 mb-32">
-        <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-10 text-center text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+        <h2 className="text-3xl md:text-4xl lg:text-4xl font-light mb-10 text-center text-red-500 font-display" style={{ letterSpacing: '0.02em' }}>
           {title}
         </h2>
 
@@ -61,8 +61,8 @@ export function FeatureSteps({
                 <motion.div
                   className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2 backdrop-blur-lg transition-all duration-300 ${
                     index === currentFeature
-                      ? "bg-white/10 border-white/30 text-white scale-110 shadow-lg shadow-white/10"
-                      : "bg-white/5 border-white/20 text-[#a3a3a3]"
+                      ? "bg-red-500/10 border-red-500/30 text-white scale-110 shadow-lg shadow-red-500/20"
+                      : "bg-white/5 border-white/20 text-gray-500"
                   }`}
                 >
                   {index <= currentFeature ? (
@@ -73,10 +73,10 @@ export function FeatureSteps({
                 </motion.div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-semibold text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+                  <h3 className="text-xl md:text-2xl font-light text-white font-display" style={{ letterSpacing: '0.02em' }}>
                     {feature.title || feature.step}
                   </h3>
-                  <p className="text-sm md:text-lg text-[#a3a3a3]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+                  <p className="text-sm md:text-lg text-gray-500 font-sans">
                     {feature.content}
                   </p>
                 </div>

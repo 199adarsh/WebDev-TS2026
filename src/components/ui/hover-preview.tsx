@@ -26,7 +26,8 @@ future: {
 }
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Canela:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
   .hover-preview-container {
     min-height: 50vh;
@@ -36,7 +37,7 @@ const styles = `
     justify-content: flex-start;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     position: relative;
   }
@@ -76,7 +77,7 @@ const styles = `
   .text-block {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     line-height: 1.6;
-    color: #888;
+    color: #6b7280;
     font-weight: 400;
     letter-spacing: -0.02em;
     text-align: left;
@@ -87,14 +88,27 @@ const styles = `
     opacity: 1;
   }
 
+  .text-gray-500 {
+    color: #6b7280;
+  }
+
+  .text-gray-600 {
+    color: #4f5358;
+  }
+
+  .text-gray-700 {
+    color: #3f454a;
+  }
+
   .hover-link {
-    color: #fff;
-    font-weight: 700;
-    font-family: 'Syne', sans-serif;
+    color: #e50914;
+    font-weight: 300;
+    font-family: 'Canela', serif;
     cursor: pointer;
     position: relative;
     display: inline-block;
     transition: color 0.3s ease;
+    letter-spacing: 0.02em;
   }
 
   .hover-link::after {
@@ -104,7 +118,7 @@ const styles = `
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
+    background: #e50914;
     transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
@@ -131,7 +145,7 @@ const styles = `
     box-shadow: 
       0 25px 50px -12px rgba(0, 0, 0, 0.8),
       0 0 0 1px rgba(255, 255, 255, 0.1),
-      0 0 60px rgba(255, 107, 107, 0.1);
+      0 0 60px rgba(229, 9, 20, 0.1);
     overflow: hidden;
     backdrop-filter: blur(10px);
   }
@@ -160,7 +174,7 @@ const styles = `
   .preview-card-subtitle {
     padding: 0 6px 6px;
     font-size: 0.75rem;
-    color: #666;
+    color: #9ca3af;
   }
 `
 
@@ -308,39 +322,39 @@ export function HoverPreview() {
        <div className="content-container">
   <div className="text-block">
     <p>
-      Explore innovative{" "}
+      <span className="text-gray-500">Explore innovative</span>{" "}
       <HoverLink
         previewKey="engineering"
         onHoverStart={handleHoverStart}
         onHoverMove={handleHoverMove}
         onHoverEnd={handleHoverEnd}
       >
-        engineering
+        Engineering
       </HoverLink>{" "}
-      competitions
+      <span className="text-gray-600">competitions</span>
       <br />
-      Built for next-generation engineers
+      <span className="text-gray-700">Built for next-generation engineers</span>
     </p>
 
     <p>
-      Experience a stage for {" "}
+      <span className="text-gray-500">Experience a stage for</span> {" "}
       <HoverLink
         previewKey="innovation"
         onHoverStart={handleHoverStart}
         onHoverMove={handleHoverMove}
         onHoverEnd={handleHoverEnd}
       >
-        innovation
+        Innovation
       </HoverLink>{" "}
       <br />
-      Where elite minds rise to shape the{" "}
+      <span className="text-gray-600">Where elite minds rise to shape</span>{" "}
       <HoverLink
         previewKey="future"
         onHoverStart={handleHoverStart}
         onHoverMove={handleHoverMove}
         onHoverEnd={handleHoverEnd}
       >
-        future
+        Future
       </HoverLink>
       .
     </p>

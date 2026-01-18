@@ -34,7 +34,7 @@ const ClubCard = ({ title, items }: ClubCardProps) => {
     >
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">{title}</h2>
+        <h2 className="text-lg font-light font-display">{title}</h2>
         <ShinyButton onClick={() => console.log("View all")}>
           <ArrowUpRight className="h-4 w-4" />
         </ShinyButton>
@@ -46,7 +46,7 @@ const ClubCard = ({ title, items }: ClubCardProps) => {
           <li key={item.name}>
             <a
               href={item.href}
-              className="flex items-center gap-2 rounded-full w-full h-[52px] border border-white/10 bg-black/50 px-3 transition-all hover:bg-black/70"
+              className="flex items-center gap-2 rounded-full w-full h-[52px] border border-white/10 bg-black/50 px-3 transition-all hover:bg-black/70 hover:border-red-500/30 group"
             >
               {/* Smaller, round icon */}
               <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white/10 -ml-1">
@@ -55,10 +55,10 @@ const ClubCard = ({ title, items }: ClubCardProps) => {
 
               {/* Text */}
               <div className="flex flex-col justify-center leading-tight overflow-hidden">
-                <span className="text-sm font-medium leading-snug break-words">
+                <span className="text-sm font-medium leading-snug break-words font-sans text-white hover:text-red-400 transition-colors" style={{ fontFamily: 'Montserrat, system-ui, sans-serif' }}>
                   {item.name}
                 </span>
-                <span className="text-xs text-white/60">
+                <span className="text-xs text-gray-500 font-sans" style={{ fontFamily: 'Montserrat, system-ui, sans-serif' }}>
                   {item.type}
                 </span>
               </div>
@@ -74,52 +74,52 @@ const ClubCard = ({ title, items }: ClubCardProps) => {
 
 const clubs = [
   {
-    title: "CS Club",
+    title: "Partners",
     items: [
       { name: "Code..", type: "Tech" as const, icon: "💻", href: "#" },
       { name: "Debug..", type: "Tech" as const, icon: "🔧", href: "#" },
     ],
   },
   {
-    title: "ML Club",
+    title: "Sponsors",
     items: [
       { name: "MLMas..", type: "Tech" as const, icon: "🤖", href: "#" },
       { name: "DataDuel", type: "Tech" as const, icon: "📊", href: "#" },
     ],
   },
   {
-    title: "AIDS Club",
+    title: "Collaborators",
     items: [
       { name: "AI Arena", type: "Tech" as const, icon: "🧠", href: "#" },
       { name: "InsightX", type: "Tech" as const, icon: "📈", href: "#" },
     ],
   },
   {
-    title: "MECH Club",
+    title: "Partners",
     items: [
       { name: "Mechat..", type: "Tech" as const, icon: "⚙️", href: "#" },
-      { name: "GearUp", type: "Non-Tech" as const, icon: "🔧", href: "#" },
+      { name: "GearUp", type: "Tech" as const, icon: "🔧", href: "#" },
     ],
   },
   {
-    title: "ETC Club",
+    title: "Sponsors",
     items: [
       { name: "Circuit..", type: "Tech" as const, icon: "⚡", href: "#" },
       { name: "Worksh..", type: "Tech" as const, icon: "🔌", href: "#" },
     ],
   },
   {
-    title: "ENTC Club",
+    title: "Partners",
     items: [
       { name: "RoboRa..", type: "Tech" as const, icon: "🤖", href: "#" },
       { name: "TechTak", type: "Tech" as const, icon: "⚡", href: "#" },
     ],
   },
   {
-    title: "Civil Club",
+    title: "Collaborators",
     items: [
       { name: "Structura", type: "Tech" as const, icon: "🏗️", href: "#" },
-      { name: "EcoBuild", type: "Non-Tech" as const, icon: "🌱", href: "#" },
+      { name: "EcoBuild", type: "Tech" as const, icon: "🌱", href: "#" },
     ],
   },
 ];
@@ -130,8 +130,8 @@ const ClubCardsDemo = () => {
   return (
     <div className="bg-black px-4 sm:px-6 md:px-8 lg:px-10 py-12 min-h-screen overflow-y-auto">
       {/* Main Title */}
-      <h1 className="text-2xl pl-[5vw] sm:text-3xl md:text-4xl font-bold text-white mb-8 sm:mb-12 text-center sm:text-left">
-        Discover The Events
+      <h1 className="text-2xl pl-[5vw] sm:text-3xl md:text-4xl font-light text-red-500 mb-8 sm:mb-12 text-center sm:text-left font-display" style={{ letterSpacing: '0.02em' }}>
+        Discover The Events !
       </h1>
 
       {/* Grid */}

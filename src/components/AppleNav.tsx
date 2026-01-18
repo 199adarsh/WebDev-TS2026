@@ -14,7 +14,7 @@ export const AppleLiquidGlassNav = () => {
             apple-glass backdrop-blur-lg opacity-80
           "
         >
-          <span className="text-[15px] font-semibold tracking-tight text-white/70">
+          <span className="text-[15px] font-light tracking-tight text-white font-display">
             TECH SYMPOSIUM 2026
           </span>
 
@@ -24,9 +24,10 @@ export const AppleLiquidGlassNav = () => {
                 key={item}
                 href="#"
                 className="
-                  text-[15px] font-semibold tracking-tight
-                  text-white/40 hover:text-white/60
+                  text-[15px] font-medium tracking-tight
+                  text-gray-400 hover:text-white
                   transition-all duration-500 ease hover:translate-y-[-0.5px]
+                  font-sans
                 "
               >
                 {item}
@@ -45,10 +46,10 @@ export const AppleLiquidGlassNav = () => {
             apple-glass
           "
         >
-          <span className="text-[13px] font-semibold tracking-tight text-white/85">
+          <span className="text-[13px] font-light tracking-tight text-white font-display">
             TECH SYMPOSIUM 2026
           </span>
-          <span className="text-[13px] font-semibold tracking-tight text-white/50">
+          <span className="text-[13px] font-medium tracking-tight text-gray-400 font-sans">
             Menu
           </span>
         </div>
