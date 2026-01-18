@@ -15,7 +15,16 @@ innovation: {
   title: "Innovation",
   subtitle: "Ideas evolve into breakthroughs",
 },
-
+limits: {
+  image: "https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=560&h=320&fit=crop",
+  title: "Limits",
+  subtitle: "Pushing boundaries to new heights",
+},
+ambition: {
+  image: "https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=560&h=320&fit=crop",
+  title: "Ambition",
+  subtitle: "Pushing boundaries to new heights",
+},
 future: {
   image: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=560&h=320&fit=crop",
   title: "The Future",
@@ -33,8 +42,8 @@ const styles = `
     min-height: 50vh;
     background: #000000ff;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     font-family: 'Montserrat', sans-serif;
@@ -80,7 +89,7 @@ const styles = `
     color: #6b7280;
     font-weight: 400;
     letter-spacing: -0.02em;
-    text-align: left;
+    text-align: justify;
   }
 
   .text-block p {
@@ -319,47 +328,77 @@ export function HoverPreview() {
     <>
       <style>{styles}</style>
       <div className="hover-preview-container">
-       <div className="content-container">
-  <div className="text-block">
-    <p>
-      <span className="text-gray-500">Explore innovative</span>{" "}
-      <HoverLink
-        previewKey="engineering"
-        onHoverStart={handleHoverStart}
-        onHoverMove={handleHoverMove}
-        onHoverEnd={handleHoverEnd}
-      >
-        Engineering
-      </HoverLink>{" "}
-      <span className="text-gray-600">competitions</span>
-      <br />
-      <span className="text-gray-700">Built for next-generation engineers</span>
-    </p>
+        <div className="content-container">
+          <div className="text-block">
 
-    <p>
-      <span className="text-gray-500">Experience a stage for</span> {" "}
-      <HoverLink
-        previewKey="innovation"
-        onHoverStart={handleHoverStart}
-        onHoverMove={handleHoverMove}
-        onHoverEnd={handleHoverEnd}
-      >
-        Innovation
-      </HoverLink>{" "}
-      <br />
-      <span className="text-gray-600">Where elite minds rise to shape</span>{" "}
-      <HoverLink
-        previewKey="future"
-        onHoverStart={handleHoverStart}
-        onHoverMove={handleHoverMove}
-        onHoverEnd={handleHoverEnd}
-      >
-        Future
-      </HoverLink>
-      .
-    </p>
-  </div>
-</div>
+            <p>
+              <span className="text-gray-500">Explore innovative</span>{" "}
+              <HoverLink
+                previewKey="engineering"
+                onHoverStart={handleHoverStart}
+                onHoverMove={handleHoverMove}
+                onHoverEnd={handleHoverEnd}
+              >
+              Engineering
+              </HoverLink>{" "}
+              <span className="text-gray-600">competitions</span>
+              <br />
+              <span className="text-gray-700">
+                crafted for the next generation of creators.
+              </span>
+            </p>
+
+            <p>
+              <span className="text-gray-500">Built for</span>{" "}
+              <span className="text-gray-600">those who think <HoverLink
+                previewKey="limits"
+                onHoverStart={handleHoverStart}
+                onHoverMove={handleHoverMove}
+                onHoverEnd={handleHoverEnd}
+              >
+                Beyond Limits,
+              </HoverLink>{" "} </span>
+              <br />
+              <span className="text-gray-700">
+                where <HoverLink
+                previewKey="ambition"
+                onHoverStart={handleHoverStart}
+                onHoverMove={handleHoverMove}
+                onHoverEnd={handleHoverEnd}
+              >
+                Ambition
+              </HoverLink>{" "} meets execution.
+              </span>
+            </p>
+
+            <p>
+              <span className="text-gray-500">Step into a stage where</span>{" "}
+              <HoverLink
+                previewKey="innovation"
+                onHoverStart={handleHoverStart}
+                onHoverMove={handleHoverMove}
+                onHoverEnd={handleHoverEnd}
+              >
+                Innovation
+              </HoverLink>{" "}
+              <span className="text-gray-600">comes alive,</span>
+              <br />
+              <span className="text-gray-600">and elite minds rise to shape the</span>{" "}
+              <HoverLink
+                previewKey="future"
+                onHoverStart={handleHoverStart}
+                onHoverMove={handleHoverMove}
+                onHoverEnd={handleHoverEnd}
+              >
+                Future
+              </HoverLink>
+              .
+            </p>
+
+          </div>
+        </div>
+
+
 
 
         <PreviewCard data={activePreview} position={position} isVisible={isVisible} cardRef={cardRef} />
