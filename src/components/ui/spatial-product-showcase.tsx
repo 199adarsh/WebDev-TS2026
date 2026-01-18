@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import {
   Battery,
@@ -103,7 +103,7 @@ const ANIMATIONS = {
       opacity: 1,
       y: 0,
       filter: 'blur(0px)',
-      transition: { type: 'spring', stiffness: 100, damping: 20 },
+      transition: { type: 'spring' as const, stiffness: 100, damping: 20 },
     },
     exit: { opacity: 0, y: -10, filter: 'blur(5px)' },
   },
@@ -121,7 +121,7 @@ const ANIMATIONS = {
       filter: 'blur(0px)',
       rotate: 0,
       x: 0,
-      transition: { type: 'spring', stiffness: 260, damping: 20 },
+      transition: { type: 'spring' as const, stiffness: 260, damping: 20 },
     },
     exit: {
       opacity: 0,
@@ -284,7 +284,7 @@ const Switcher = ({
               <motion.div
                 layoutId="island-surface"
                 className="absolute inset-0 rounded-full bg-gradient-to-b from-white/10 to-white/5 shadow-inner"
-                transition={{ type: 'spring', stiffness: 220, damping: 22 }}
+                transition={{ type: 'spring' as const, stiffness: 220, damping: 22 }}
               />
             )}
             <span className={`relative z-10 transition-colors duration-300 ${activeId === opt.id ? 'text-white' : 'text-zinc-500 hover:text-zinc-300'}`}>
@@ -322,7 +322,7 @@ export default function EarbudShowcase() {
       <main className="relative z-10 w-full px-6 py-8 flex flex-col justify-center max-w-7xl mx-auto">
         <motion.div
           layout
-          transition={{ type: 'spring', bounce: 0, duration: 0.9 }}
+          transition={{ type: 'spring' as const, bounce: 0, duration: 0.9 }}
           className={`flex flex-col md:flex-row items-center justify-center gap-12 md:gap-32 lg:gap-48 w-full ${
             isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
           }`}
