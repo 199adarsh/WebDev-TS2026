@@ -103,18 +103,22 @@ export const LiquidGlassDock = ({
           </a>
       ))}
 
-      <div 
-        ref={limelightRef}
-        className={`absolute top-1 -translate-y-1/2 z-10 w-8 h-[3px] rounded-full bg-white shadow-[0_50px_15px_rgba(255,255,255,0.3)] ${
-          isReady ? 'transition-[left] duration-400 ease-in-out' : ''
-        } ${limelightClassName}`}
-        style={{ left: '-999px' }}
-      >
-        <div className="absolute left-[-30%] top-[3px] w-[160%] h-8 [clip-path:polygon(5%_100%,25%_0,75%_0,95%_100%)] bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
-      </div>
+    <div 
+      ref={limelightRef}
+      className={`absolute top-1 -translate-y-1/2 z-10 w-8 h-[3px] rounded-full 
+      bg-[#e50914]
+      shadow-[0_0_25px_rgba(229,9,20,0.45),0_0_50px_rgba(229,9,20,0.25)] ${
+        isReady ? 'transition-[left] duration-400 ease-in-out' : ''
+      } ${limelightClassName}`}
+      style={{ left: '-999px' }}
+    >
+      <div className="absolute left-[-30%] top-[3px] w-[160%] h-8 
+      [clip-path:polygon(5%_100%,25%_0,75%_0,95%_100%)] 
+      bg-gradient-to-b from-[#e50914]/40 to-transparent pointer-events-none" />
+    </div>
     </nav>
-  );
-};
+      );
+    };
 
 // Example usage components
 const customNavItems = [
