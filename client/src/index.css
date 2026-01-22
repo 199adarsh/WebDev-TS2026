@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Cinematic Dark Theme Palette */
+  --background: 0 0% 5.5%;       /* #0E0E0E - Deep Black */
+  --foreground: 0 0% 95%;        /* #F2F2F2 - Off White */
+  
+  --card: 0 0% 11%;              /* #1C1C1C - Dark Gray Surface */
+  --card-foreground: 0 0% 90%;
+  
+  --popover: 0 0% 9%;
+  --popover-foreground: 0 0% 95%;
+  
+  --primary: 356 92% 47%;        /* #E50914 - Netflix Red */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 0 0% 15%;         /* #262626 - Slightly lighter gray */
+  --secondary-foreground: 0 0% 80%;
+  
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;  /* #999999 - Muted text */
+  
+  --accent: 356 92% 47%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 356 92% 47%;
+
+  --radius: 0.75rem;
+
+  --font-display: 'Merriweather', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html.lenis {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight font-bold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Cinematic Utilities */
+  .mask-gradient-b {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+  
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+}

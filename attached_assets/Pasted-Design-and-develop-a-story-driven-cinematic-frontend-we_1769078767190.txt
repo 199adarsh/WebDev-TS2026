@@ -1,0 +1,293 @@
+Design and develop a story-driven, cinematic frontend website for a technology event named “Tech Symposium”. The website should feel like a guided narrative experience, inspired by Apple’s design philosophy—minimal, calm, premium, and intentional. The layout should avoid clutter and dashboards, instead unfolding the story of the event as the user scrolls.
+
+Use Bento UI layouts sparingly, only where structured grouping enhances clarity (such as highlights, featured events, sponsors, or team members). Most sections should be editorial and narrative, not card-based.
+
+🎭 Core Design Philosophy
+
+Story first, layout second
+
+Calm, premium, Apple-style minimalism
+
+Depth through spacing and blur, not glow
+
+Motion that feels natural and restrained
+
+Every section should feel intentional and meaningful
+
+🎨 Visual Style & Color Theme
+Color Palette (Netflix-inspired, Apple-clean)
+
+Primary background: Deep black / near-black (#0E0E0E, #141414)
+
+Secondary surfaces: Soft dark grays (#1C1C1C, #262626)
+
+Accent color: Netflix red (#E50914) — used sparingly
+
+Text: White and muted gray
+
+Borders: Very subtle low-contrast strokes
+
+❌ No glow
+❌ No neon effects
+❌ No cyberpunk styling
+
+✅ Matte finishes
+✅ Soft gradients
+✅ Natural lighting
+✅ Frosted glass blur
+
+🔤 Typography
+Primary Display Font: Benguiat
+
+Use for:
+
+Event name
+
+Hero headlines
+
+Chapter titles
+
+Emotional statements
+
+Styling:
+
+Large scale
+
+Slight letter spacing
+
+High contrast
+
+Strong presence
+
+Secondary Font: Montserrat
+
+Use for:
+
+Body text
+
+Navigation
+
+Buttons
+
+Labels
+
+Descriptions
+
+Clean, modern, and highly readable.
+
+🧭 Navigation Bar (Pill-Style)
+
+Floating pill-shaped navigation bar
+
+Frosted glass background (backdrop-filter: blur)
+
+Thin border
+
+Very soft shadow (no glow)
+
+Sticky on scroll
+
+Smooth slide-in on page load
+
+Menu items:
+
+Home
+
+Events
+
+Sponsors
+
+Developers
+
+Active state:
+
+Minimal red underline or dot
+
+Subtle animation
+
+🏠 Page Structure & Story Flow
+1️⃣ Home Page — Narrative Experience
+
+The home page should feel like a cinematic story unfolding.
+
+Chapter 1: Hero (Not Bento)
+
+Full-screen section
+
+Large Benguiat title: “Tech Symposium”
+
+Subheading in Montserrat describing the vision
+
+Minimal animated background (subtle gradients or particles)
+
+CTA: “Begin the Experience” / “Explore Symposium”
+
+Chapter 2: The Vision (Not Bento)
+
+Editorial layout
+
+Large typography blocks
+
+Story-driven copy
+
+Calm fade-in on scroll
+
+No cards or grids
+
+Chapter 3: Highlights (Bento Section)
+
+Use Bento here.
+
+3–5 softly rounded cards
+
+Topics, innovations, speakers, experiences
+
+Frosted or matte surfaces
+
+Gentle hover elevation
+
+No glow, no heavy shadows
+
+Chapter 4: The Journey (Not Bento)
+
+Vertical timeline or scroll narrative
+
+Milestones of the symposium
+
+Smooth transitions
+
+Apple-style motion easing
+
+Chapter 5: Featured Events (Bento)
+
+Structured bento grid showing:
+
+Event title (Benguiat)
+
+Date & category
+
+Short description (Montserrat)
+
+Minimal interaction cues
+
+Chapter 6: Call to Action (Not Bento)
+
+Strong emotional headline
+
+Calm background
+
+Single clear action (Register / Join)
+
+Minimal design, maximum focus
+
+2️⃣ Events Page
+
+Story-style intro section (not bento)
+
+Explanation of what makes the events unique
+
+Then:
+
+Bento-style grid for event listings
+
+Each event card:
+
+Title (Benguiat)
+
+Description (Montserrat)
+
+Date & time
+
+Category tag
+
+Register button
+
+Optional:
+
+Filters with smooth transitions
+
+Expandable details
+
+3️⃣ Sponsors Page
+
+Narrative intro about collaboration and support
+
+Followed by a bento grid of sponsors
+
+Sponsor cards:
+
+Logo
+
+Name
+
+Tier (Platinum / Gold / Silver)
+
+Clean hover elevation
+
+Subtle red accents only when active
+
+4️⃣ Developers Page
+
+Story-driven intro describing the team and purpose
+
+Then a bento grid of developer profiles
+
+Profile cards:
+
+Photo
+
+Name
+
+Role
+
+Social links
+
+Clean, calm layout
+
+🧩 UI Components & Interactions
+
+Pill-shaped buttons
+
+Minimal hover transitions
+
+Scroll-triggered fade and slide animations
+
+Parallax used sparingly
+
+Apple-like easing curves
+
+Frosted glass only where appropriate
+
+Clear visual hierarchy
+
+📱 Responsiveness
+
+Fully responsive across mobile, tablet, desktop
+
+Mobile navigation becomes a floating pill or bottom bar
+
+Touch-friendly spacing and interactions
+
+🛠 Optional Tech Stack (If Implementing)
+
+React / Next.js
+
+Tailwind CSS
+
+Framer Motion
+
+CSS Grid & Flexbox
+
+Lenis or native smooth scrolling
+
+🎯 UX Goals
+
+Feels like a journey, not a website
+
+Calm, premium, and immersive
+
+Minimal yet emotionally engaging
+
+Apple-level polish
+
+Strong identity without visual noise
