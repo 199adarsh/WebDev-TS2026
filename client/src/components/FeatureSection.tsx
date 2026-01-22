@@ -41,20 +41,32 @@ export default function FeatureSection() {
   const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
 
   return (
-    <section className="relative max-w-6xl mx-auto my-16 pl-10 flex items-center justify-between h-[25rem] bg-black overflow-hidden rounded-3xl md:border md:border-netflix-red/20">
+    <section className="relative max-w-6xl mx-auto my-16 px-6 flex items-center justify-between h-[25rem] bg-black overflow-hidden rounded-3xl md:border md:border-netflix-red/20">
       {/* Left side: Heading and Text */}
       <div className="w-1/2 z-10">
         <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-white font-display">
-          Build your idea
+          Build Your Ideas
         </h1>
-        <p className="text-white/60 mb-6 max-w-lg font-body">
-          Tech Symposium is a modern platform for showcasing innovation and technology.
+        <p className="text-white/60 mb-8 max-w-lg font-body text-lg leading-relaxed">
+          Tech Symposium is a modern platform for showcasing innovation and technology. Join us to explore cutting-edge projects and connect with fellow innovators.
         </p>
-        <div className="flex items-center gap-3">
-            <Button variant="default" className="bg-netflix-red hover:bg-netflix-red/90 text-white border-netflix-red">
-            <Link href="/events" target="_blank"> Get Started</Link>
+        <div className="flex items-center gap-4">
+          <Button variant="default" className="bg-netflix-red hover:bg-netflix-red/90 text-white border-netflix-red px-8 py-3 text-lg font-semibold rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-netflix-red/25">
+            <Link href="/events" className="flex items-center gap-2">
+              Get Started
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </Button>
-          <Button variant="outline" className="border-netflix-red text-netflix-red hover:bg-netflix-red hover:text-white">Learn More</Button>
+          <Button variant="outline" className="border-netflix-red text-netflix-red hover:bg-netflix-red hover:text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-200 hover:scale-105 active:scale-95">
+            <Link href="/developers" className="flex items-center gap-2">
+              Learn More
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </Link>
+          </Button>
         </div>
       </div>
 

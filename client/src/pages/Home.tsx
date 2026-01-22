@@ -7,7 +7,6 @@ import { FeaturesSectionMinimal } from "@/components/BentoCard";
 import FeatureSection from "@/components/FeatureSection";
 import { ParallaxHero } from "@/components/ParallaxHero";
 import ClubCard from "@/components/Club-card";
-import { NavBarDemo } from "@/components/NavBarDemo";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -19,9 +18,6 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="min-h-screen relative overflow-hidden">
-      {/* Pill Navigation */}
-      <NavBarDemo />
-
       {/* Parallax Hero Section */}
       <ParallaxHero />
 
