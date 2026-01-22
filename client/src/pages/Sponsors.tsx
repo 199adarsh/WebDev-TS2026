@@ -1,19 +1,20 @@
-import { useSponsors } from "@/hooks/use-sponsors";
+import { mockSponsors } from "@/data/mock-data";
 import { SectionHeader } from "@/components/SectionHeader";
-import { BentoCard } from "@/components/BentoCard";
+import { EventCard } from "@/components/EventCard";
 import { motion } from "framer-motion";
 
 export default function Sponsors() {
-  const { data: sponsors, isLoading } = useSponsors();
+  const sponsors = mockSponsors;
+  const isLoading = false;
 
   // Group sponsors by tier
   const tiers = ["Platinum", "Gold", "Silver"];
-  const groupedSponsors = sponsors?.reduce((acc, sponsor) => {
+  const groupedSponsors = sponsors.reduce((acc, sponsor) => {
     const tier = sponsor.tier;
     if (!acc[tier]) acc[tier] = [];
     acc[tier].push(sponsor);
     return acc;
-  }, {} as Record<string, typeof sponsors>) || {};
+  }, {} as Record<string, typeof sponsors>);
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
@@ -39,7 +40,7 @@ export default function Sponsors() {
             return (
               <div key={tier} className="relative">
                 <div className="flex items-center gap-4 mb-8">
-                  <h3 className="text-2xl font-display font-bold text-white uppercase tracking-widest">
+                  <h3 className="text-2xl font-display text-white uppercase tracking-widest">
                     {tier} Partners
                   </h3>
                   <div className="h-[1px] bg-white/10 flex-1" />
@@ -47,7 +48,7 @@ export default function Sponsors() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {tierSponsors.map((sponsor, idx) => (
-                    <BentoCard 
+                    <EventCard 
                       key={sponsor.id} 
                       delay={idx * 0.1}
                       className="flex items-center justify-center p-12 bg-white/5 hover:bg-white/10 aspect-[3/2]"
@@ -59,7 +60,7 @@ export default function Sponsors() {
                         alt={sponsor.name}
                         className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
                       />
-                    </BentoCard>
+                    </EventCard>
                   ))}
                 </div>
               </div>

@@ -83,9 +83,10 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)"],
+        sans: ["Montserrat", "var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
+        display: ["Benguiat", "Impact", "Arial Black", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

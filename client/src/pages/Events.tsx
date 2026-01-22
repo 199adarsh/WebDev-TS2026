@@ -1,12 +1,13 @@
-import { useEvents } from "@/hooks/use-events";
+import { mockEvents } from "@/data/mock-data";
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/SectionHeader";
-import { BentoCard } from "@/components/BentoCard";
+import { EventCard } from "@/components/EventCard";
 import { Calendar, MapPin, Tag } from "lucide-react";
 import { format } from "date-fns";
 
 export default function Events() {
-  const { data: events, isLoading } = useEvents();
+  const events = mockEvents;
+  const isLoading = false;
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
@@ -24,7 +25,7 @@ export default function Events() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events?.map((event, index) => (
-            <BentoCard key={event.id} delay={index * 0.1} className="h-full min-h-[320px] flex flex-col">
+            <EventCard key={event.id} delay={index * 0.1} className="h-full min-h-[320px] flex flex-col">
               {/* Image Area */}
               <div className="relative h-48 -mx-6 -mt-6 mb-6 overflow-hidden bg-secondary">
                 {/* 
@@ -37,7 +38,7 @@ export default function Events() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-xs font-medium text-white flex items-center gap-1">
+                  <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-xs text-white flex items-center gap-1">
                     <Tag className="w-3 h-3" />
                     {event.category}
                   </span>
@@ -45,7 +46,7 @@ export default function Events() {
               </div>
 
               <div className="flex-1 flex flex-col">
-                <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-display text-white mb-2 group-hover:text-primary transition-colors">
                   {event.title}
                 </h3>
                 <p className="text-muted-foreground text-sm line-clamp-2 mb-6 flex-1">
@@ -63,7 +64,7 @@ export default function Events() {
                   </div>
                 </div>
               </div>
-            </BentoCard>
+            </EventCard>
           ))}
         </div>
       )}
