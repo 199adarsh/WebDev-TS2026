@@ -3,4 +3,10 @@
   publish = "dist/public"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
+
+# Disable Next.js plugin since this is a Vite project
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disabled = true
