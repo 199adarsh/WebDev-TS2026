@@ -4,3 +4,5 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# No plugins - clean Vite build
