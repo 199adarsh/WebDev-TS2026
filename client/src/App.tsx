@@ -33,7 +33,7 @@ function Router() {
 
 function App() {
   const navItems = [
-    { name: "Vision", url: "/", icon: HomeIcon },
+    { name: "Home", url: "/", icon: HomeIcon },
     { name: "Events", url: "/events", icon: FileTextIcon },
     { name: "Partners", url: "/sponsors", icon: BriefcaseIcon },
     { name: "Team", url: "/developers", icon: UserIcon },
