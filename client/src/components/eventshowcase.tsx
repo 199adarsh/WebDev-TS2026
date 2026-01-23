@@ -305,13 +305,24 @@ export default function ClubEventShowcase() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <div className="text-center py-16 px-6">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-          Club Events
-        </h1>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light">
-          Engineering club events categorized by type
-        </p>
+      <div className="text-center px-6 relative h-screen flex items-center justify-center">
+        <div className="relative z-10">
+          <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-6 text-white">
+            Club Events
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-medium leading-relaxed">
+            Discover extraordinary events from 7 engineering clubs. From hackathons to robotics competitions, 
+            find your next adventure in tech and non-tech experiences.
+          </p>
+          <div className="mt-8 flex justify-center gap-4">
+            <div className="px-4 py-2 bg-red-600/20 border border-red-600/30 rounded-full">
+              <span className="text-red-400 text-sm font-medium">7 Engineering Clubs</span>
+            </div>
+            <div className="px-4 py-2 bg-blue-600/20 border border-blue-600/30 rounded-full">
+              <span className="text-blue-400 text-sm font-medium">14+ Events</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Tech Events Section */}
@@ -322,7 +333,7 @@ export default function ClubEventShowcase() {
             <div className="h-0.5 w-16 bg-white rounded-full opacity-60"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8 justify-items-center">
             {techEvents.map(({ event, club }) => (
               <ExpandableCard
                 key={event.id}
@@ -373,7 +384,7 @@ export default function ClubEventShowcase() {
             <div className="h-0.5 w-16 bg-white rounded-full opacity-60"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8 justify-items-center">
             {nonTechEvents.map(({ event, club }) => (
               <ExpandableCard
                 key={event.id}
@@ -607,11 +618,11 @@ export function ExpandableCard({
         aria-modal="true"
         layoutId={`card-${title}-${id}`}
         className={cn(
-          "p-4 flex flex-col justify-between items-start bg-gray-500/20  rounded-2xl transition-all duration-300 border border-gray-700 cursor-pointer",
+          "flex flex-col justify-between bg-gray-500/20  rounded-2xl transition-all duration-300 border border-gray-700 cursor-pointer w-full overflow-hidden",
           className,
         )}
       >
-        <div className="flex gap-4 flex-col">
+        <div className="flex flex-col flex-1">
           <motion.div 
             layoutId={`image-${title}-${id}`}
             onClick={() => setActive(true)}
@@ -620,61 +631,64 @@ export function ExpandableCard({
             <img
               src={src}
               alt={title}
-              className="w-64 h-56 rounded-lg object-cover object-center"
+              className="w-full h-40 sm:h-48 md:h-56 object-cover object-center"
             />
           </motion.div>
-          <div className="flex justify-between items-center">
-            <div className="flex flex-col">
-              <motion.p
-                layoutId={`description-${description}-${id}`}
-                className="text-white/80 md:text-left text-sm font-medium"
-              >
-                {description}
-              </motion.p>
-              <motion.h3
-                layoutId={`title-${title}-${id}`}
-                className="text-white md:text-left font-semibold"
-              >
-                {title}
-              </motion.h3>
-            </div>
+          <div className="flex flex-col gap-2 p-3 sm:p-4 flex-1">
+            <motion.p
+              layoutId={`description-${description}-${id}`}
+              className="text-white/80 md:text-left text-sm font-medium"
+            >
+              {description}
+            </motion.p>
+            <motion.h3
+              layoutId={`title-${title}-${id}`}
+              className="text-white md:text-left font-semibold"
+            >
+              {title}
+            </motion.h3>
+          </div>
+          <div className="flex gap-2 items-center p-3 sm:p-4 pt-0">
+            <button className="flex-1 h-8 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg">
+              Register Now
+            </button>
             <div className="relative z-[50] pointer-events-auto">
-              <motion.button
-                aria-label="Open card"
-                layoutId={`button-${title}-${id}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActive(true);
-                }}
-                className={cn(
-                  "h-8 w-8 shrink-0 flex items-center justify-center rounded-full bg-red-600/20 hover:bg-red-600/30 text-white/70 hover:text-white border border-red-600/30 hover:border-red-600/50 transition-colors duration-300 focus:outline-none",
-                  className,
-                )}
-                style={{
-                  backgroundColor: 'rgba(229, 39, 39, 0.2)',
-                  borderColor: 'rgba(229, 39, 39, 0.4)'
-                }}
+            <motion.button
+              aria-label="Open card"
+              layoutId={`button-${title}-${id}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                setActive(true);
+              }}
+              className={cn(
+                "h-8 w-8 shrink-0 flex items-center justify-center rounded-full bg-red-600/20 hover:bg-red-600/30 text-white/70 hover:text-white border border-red-600/30 hover:border-red-600/50 transition-colors duration-300 focus:outline-none",
+                className,
+              )}
+              style={{
+                backgroundColor: 'rgba(229, 39, 39, 0.2)',
+                borderColor: 'rgba(229, 39, 39, 0.4)'
+              }}
+            >
+            <motion.div
+              animate={{ rotate: active ? 45 : 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-              <motion.div
-                animate={{ rotate: active ? 45 : 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14" />
-                  <path d="M12 5v14" />
-                </svg>
-              </motion.div>
-            </motion.button>
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+            </motion.div>
+          </motion.button>
             </div>
           </div>
         </div>
