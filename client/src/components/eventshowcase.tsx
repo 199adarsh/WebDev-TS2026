@@ -386,6 +386,14 @@ export default function ClubEventShowcase() {
                   <div>
                     <h4 className="font-semibold text-white mb-2 text-lg">{club.title}</h4>
                     <h5 className="text-white/90 font-medium text-base mb-3">{event.title}</h5>
+                    <div className="flex gap-3 items-center mb-4">
+                      <button className="flex-1 h-9 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg">
+                        Join Event
+                      </button>
+                      <button className="px-3 py-2 text-xs font-medium bg-gray-800/70 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50 transition-colors rounded-lg flex items-center gap-1">
+                        📍 {event.location}
+                      </button>
+                    </div>
                     <p className="text-sm text-gray-300 leading-relaxed mb-4">
                       {event.description}
                     </p>
@@ -416,15 +424,6 @@ export default function ClubEventShowcase() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex gap-3 items-center">
-                    <button className="flex-1 h-9 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg">
-                      Join Event
-                    </button>
-                    <button className="px-3 py-2 text-xs font-medium bg-gray-800/70 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50 transition-colors rounded-lg flex items-center gap-1">
-                      📍 {event.location}
-                    </button>
                   </div>
                 </div>
               </ExpandableCard>
@@ -455,6 +454,14 @@ export default function ClubEventShowcase() {
                   <div>
                     <h4 className="font-semibold text-white mb-2 text-lg">{club.title}</h4>
                     <h5 className="text-white/90 font-medium text-base mb-3">{event.title}</h5>
+                    <div className="flex gap-3 items-center mb-4">
+                      <button className="flex-1 h-9 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg">
+                        Join Event
+                      </button>
+                      <button className="px-3 py-2 text-xs font-medium bg-gray-800/70 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50 transition-colors rounded-lg flex items-center gap-1">
+                        📍 {event.location}
+                      </button>
+                    </div>
                     <p className="text-sm text-gray-300 leading-relaxed mb-4">
                       {event.description}
                     </p>
@@ -485,15 +492,6 @@ export default function ClubEventShowcase() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex gap-3 items-center">
-                    <button className="flex-1 h-9 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg">
-                      Join Event
-                    </button>
-                    <button className="px-3 py-2 text-xs font-medium bg-gray-800/70 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50 transition-colors rounded-lg flex items-center gap-1">
-                      📍 {event.location}
-                    </button>
                   </div>
                 </div>
               </ExpandableCard>
