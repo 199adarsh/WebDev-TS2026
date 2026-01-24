@@ -12,6 +12,7 @@ import Sponsors from "@/pages/Sponsors";
 import Developers from "@/pages/Developers";
 import NotFound from "@/pages/not-found";
 import { FloatingNav } from "@/components/PillNav";
+import { MinimalFooter } from "@/components/footer";
 import {
   Home as HomeIcon,
   Calendar as CalendarIcon,
@@ -25,7 +26,6 @@ function Router() {
       <Route path="/" element={<Home />} />
       <Route path="/events" element={<Events />} />
       <Route path="/sponsors" element={<Sponsors />} />
-      <Route path="/developers" element={<Developers />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
@@ -36,7 +36,6 @@ function App() {
     { name: "Home", link: "/", icon: <HomeIcon size={20} /> },
     { name: "Events", link: "/events", icon: <CalendarIcon size={20} /> },
     { name: "Sponsors", link: "/sponsors", icon: <CrownIcon size={20} /> },
-    { name: "Developers", link: "/developers", icon: <CodeIcon size={20} /> },
   ];
 
   return (
@@ -44,9 +43,12 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
           <TooltipProvider>
-            <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
+            <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white flex flex-col">
               <FloatingNav navItems={navItems} />
-              <Router />
+              <main className="flex-1">
+                <Router />
+              </main>
+              <MinimalFooter />
               <Toaster />
             </div>
           </TooltipProvider>
