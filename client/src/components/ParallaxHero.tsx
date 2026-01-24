@@ -71,7 +71,19 @@ export function ParallaxHero() {
             {/* Far Background Layer - Slowest */}
             <div 
               data-parallax-layer="1" 
-              className="parallax__layer-bg"
+              className="parallax__layer-bg md:hidden"
+              style={{
+                backgroundImage: 'url(/TechSympoSium%20BackGround%20M.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            />
+            
+            {/* Desktop Background Layer - Hidden on mobile */}
+            <div 
+              data-parallax-layer="1" 
+              className="parallax__layer-bg hidden md:block"
               style={{
                 background: 'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(229,9,20,0.08), transparent 70%)'
               }}
@@ -80,7 +92,7 @@ export function ParallaxHero() {
             {/* Mid Glow Layer - Medium */}
             <div 
               data-parallax-layer="2" 
-              className="parallax__layer-glow"
+              className="parallax__layer-glow hidden md:block"
               style={{
                 background: 'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(229,9,20,0.15), transparent 60%)'
               }}
@@ -89,7 +101,7 @@ export function ParallaxHero() {
             {/* PNG Characters Layer - Fastest */}
             <div 
               data-parallax-layer="3" 
-              className="parallax__layer-characters"
+              className="parallax__layer-characters hidden md:block"
               style={{
                 backgroundImage: `url("/TechSympoSium BackGround2.png")`,
                 backgroundSize: '90% auto',
@@ -100,7 +112,7 @@ export function ParallaxHero() {
           </div>
           
           {/* Content Overlay */}
-          <div className="parallax__content-overlay">
+          <div className="parallax__content-overlay mt-8 md:mt-0">
             {/* <span className="inline-block py-1 px-3 rounded-full border border-primary/30 text-primary text-xs tracking-widest uppercase mb-4 bg-primary/5">
               DKTE'S National Level Event 
             </span> */}
@@ -112,10 +124,10 @@ export function ParallaxHero() {
                 style={{ maxHeight: '162px' }}
               />
             </div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white mb-4 font-display">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-4 font-display text-center">
               
             </h1>
-            <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-4 font-body">
+            <p className="text-xs sm:text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-4 font-body text-center px-4">
               Where innovation meets narrative
             </p>
             
