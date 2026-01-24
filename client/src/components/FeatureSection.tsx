@@ -41,17 +41,17 @@ export default function FeatureSection() {
   const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
 
   return (
-    <section className="relative max-w-6xl mx-auto my-16 px-6 flex items-center justify-between h-[25rem] bg-black overflow-hidden rounded-3xl md:border md:border-netflix-red/20">
+    <section className="relative max-w-6xl mx-auto my-16 px-6 flex flex-col md:flex-row items-center justify-between min-h-[30rem] overflow-visible md:overflow-hidden rounded-3xl md:border md:border-netflix-red/20">
       {/* Left side: Heading and Text */}
-      <div className="w-1/2 z-10">
-        <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-white font-display">
+      <div className="w-full md:w-1/2 z-10 text-center md:text-left mb-8 md:mb-0">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white font-display">
           Build Your Ideas
         </h1>
-        <p className="text-white/60 mb-8 max-w-lg font-body text-lg leading-relaxed">
+        <p className="text-white/60 mb-8 max-w-lg font-body text-sm sm:text-base leading-relaxed">
           Tech Symposium is a modern platform for showcasing innovation and technology. Join us to explore cutting-edge projects and connect with fellow innovators.
         </p>
-        <div className="flex items-center gap-4">
-          <Button variant="default" className="bg-netflix-red hover:bg-netflix-red/90 text-white border-netflix-red px-8 py-3 text-lg font-semibold rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-netflix-red/25">
+        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+          <Button variant="default" className="bg-netflix-red hover:bg-netflix-red/90 text-white border-netflix-red px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-lg font-semibold rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-netflix-red/25">
             <Link href="/events" className="flex items-center gap-2">
               Get Started
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,20 +59,13 @@ export default function FeatureSection() {
               </svg>
             </Link>
           </Button>
-          <Button variant="outline" className="border-netflix-red text-netflix-red hover:bg-netflix-red hover:text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-200 hover:scale-105 active:scale-95">
-            <Link href="/developers" className="flex items-center gap-2">
-              Learn More
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </Link>
-          </Button>
+         
         </div>
       </div>
 
-      {/* Right side: Orbit animation cropped to 1/4 */}
-      <div className="relative w-1/2 h-full flex items-center justify-start overflow-hidden">
-        <div className="relative w-[50rem] h-[50rem] translate-x-[50%] flex items-center justify-center">
+      {/* Right side: Orbit animation */}
+      <div className="relative w-full md:w-1/2 h-[25rem] md:h-[30rem] flex items-center justify-center overflow-visible">
+        <div className="relative w-[25rem] sm:w-[35rem] md:w-[40rem] h-[25rem] sm:h-[35rem] md:h-[40rem] flex items-center justify-center">
           {/* Center Circle */}
           <div className="w-24 h-24 rounded-full bg-black/60 border border-netflix-red/30 shadow-lg flex items-center justify-center">
             <FaReact className="w-12 h-12 text-netflix-red" />

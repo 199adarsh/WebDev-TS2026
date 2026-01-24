@@ -362,30 +362,46 @@ export default function ClubEventShowcase() {
               >
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Event Details</h4>
-                    <p className="text-sm text-gray-300 leading-relaxed">
+                    <h4 className="font-semibold text-white mb-2 text-lg">{club.title}</h4>
+                    <h5 className="text-white/90 font-medium text-base mb-3">{event.title}</h5>
+                    <p className="text-sm text-gray-300 leading-relaxed mb-4">
                       {event.description}
                     </p>
                   </div>
                   
-                  <div className="bg-gray-900 rounded-xl p-4 border-2 border-gray-800">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-sm font-medium text-white">{club.title}</span>
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      {club.stats.memberCount} members • {club.stats.eventsCount} events
-                    </div>
-                    <div className="text-xs text-gray-500 mt-1">
-                      {event.date} • {event.location}
+                  <div className="space-y-3">
+                    <h6 className="text-white font-medium text-sm">Event Rounds:</h6>
+                    <div className="space-y-2">
+                      <div className="flex items-start gap-2">
+                        <span className="text-red-500 text-xs mt-1">●</span>
+                        <div>
+                          <p className="text-white/80 text-sm font-medium">Round 1: Preliminary</p>
+                          <p className="text-gray-400 text-xs">Initial screening and basic concept evaluation</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-red-500 text-xs mt-1">●</span>
+                        <div>
+                          <p className="text-white/80 text-sm font-medium">Round 2: Technical Round</p>
+                          <p className="text-gray-400 text-xs">In-depth technical assessment and practical implementation</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-red-500 text-xs mt-1">●</span>
+                        <div>
+                          <p className="text-white/80 text-sm font-medium">Round 3: Final Presentation</p>
+                          <p className="text-gray-400 text-xs">Final presentation to judges and audience</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="flex gap-2">
-                    <button className="flex-1 h-9 text-xs font-medium bg-white text-black hover:bg-gray-100 transition-colors rounded-lg">
-                      Join
+                  <div className="flex gap-3 items-center">
+                    <button className="flex-1 h-9 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg">
+                      Join Event
                     </button>
-                    <button className="flex-1 h-9 text-xs font-medium border border-gray-600 text-white hover:bg-gray-800 transition-colors rounded-lg">
-                      Register
+                    <button className="px-3 py-2 text-xs font-medium bg-gray-800/70 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50 transition-colors rounded-lg flex items-center gap-1">
+                      📍 {event.location}
                     </button>
                   </div>
                 </div>
@@ -415,30 +431,46 @@ export default function ClubEventShowcase() {
               >
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Event Details</h4>
-                    <p className="text-sm text-gray-300 leading-relaxed">
+                    <h4 className="font-semibold text-white mb-2 text-lg">{club.title}</h4>
+                    <h5 className="text-white/90 font-medium text-base mb-3">{event.title}</h5>
+                    <p className="text-sm text-gray-300 leading-relaxed mb-4">
                       {event.description}
                     </p>
                   </div>
                   
-                  <div className="bg-gray-900 rounded-xl p-4 border-2 border-gray-800">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-sm font-medium text-white">{club.title}</span>
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      {club.stats.memberCount} members • {club.stats.eventsCount} events
-                    </div>
-                    <div className="text-xs text-gray-500 mt-1">
-                      {event.date} • {event.location}
+                  <div className="space-y-3">
+                    <h6 className="text-white font-medium text-sm">Event Rounds:</h6>
+                    <div className="space-y-2">
+                      <div className="flex items-start gap-2">
+                        <span className="text-red-500 text-xs mt-1">●</span>
+                        <div>
+                          <p className="text-white/80 text-sm font-medium">Round 1: Preliminary</p>
+                          <p className="text-gray-400 text-xs">Initial screening and basic concept evaluation</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-red-500 text-xs mt-1">●</span>
+                        <div>
+                          <p className="text-white/80 text-sm font-medium">Round 2: Technical Round</p>
+                          <p className="text-gray-400 text-xs">In-depth technical assessment and practical implementation</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-red-500 text-xs mt-1">●</span>
+                        <div>
+                          <p className="text-white/80 text-sm font-medium">Round 3: Final Presentation</p>
+                          <p className="text-gray-400 text-xs">Final presentation to judges and audience</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="flex gap-2">
-                    <button className="flex-1 h-9 text-xs font-medium bg-white text-black hover:bg-gray-100 transition-colors rounded-lg">
-                      Join
+                  <div className="flex gap-3 items-center">
+                    <button className="flex-1 h-9 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg">
+                      Join Event
                     </button>
-                    <button className="flex-1 h-9 text-xs font-medium border border-gray-600 text-white hover:bg-gray-800 transition-colors rounded-lg">
-                      Register
+                    <button className="px-3 py-2 text-xs font-medium bg-gray-800/70 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50 transition-colors rounded-lg flex items-center gap-1">
+                      📍 {event.location}
                     </button>
                   </div>
                 </div>
@@ -552,15 +584,14 @@ export function ExpandableCard({
               layoutId={`card-${title}-${id}`}
               ref={cardRef}
               className={cn(
-                "w-full max-w-[850px] max-h-[90vh] flex flex-col sm:rounded-2xl backdrop-blur-xl relative border border-white/20 pointer-events-auto",
+                "w-full max-w-[850px] max-h-[90vh] flex flex-col sm:rounded-2xl backdrop-blur-xl relative border border-gray-800/50 pointer-events-auto",
                 classNameExpanded,
               )}
               style={{
-                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08))',
+                background: 'linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(10, 10, 10, 0.98))',
                 backdropFilter: 'blur(20px)',
                 WebkitBackdropFilter: 'blur(20px)',
-                backgroundImage: 'linear-gradient(135deg, transparent 50%, rgba(229, 39, 39, 0.15) 100%)',
-                border: '1px solid rgba(255, 255, 255, 0.18)'
+                border: '1px solid rgba(229, 39, 39, 0.2)'
               }}
               {...props}
             >
@@ -607,11 +638,7 @@ export function ExpandableCard({
                 <motion.button
                   aria-label="Close card"
                   layoutId={`button-${title}-${id}`}
-                  className="h-10 w-10 shrink-0 flex items-center justify-center rounded-full bg-red-600/20 hover:bg-red-600/30 text-white/70 hover:text-white border border-red-600/30 hover:border-red-600/50 transition-colors duration-300 focus:outline-none pointer-events-auto relative z-[9999]"
-                  style={{
-                    backgroundColor: 'rgba(229, 39, 39, 0.2)',
-                    borderColor: 'rgba(229, 39, 39, 0.4)'
-                  }}
+                  className="h-10 w-10 shrink-0 flex items-center justify-center rounded-full bg-gray-700/50 hover:bg-gray-600/50 text-white/70 hover:text-white border border-gray-600/50 hover:border-gray-500/50 transition-colors duration-300 focus:outline-none pointer-events-auto relative z-[9999]"
                   onClick={() => setActive(false)}
                 >
                   <motion.div
@@ -658,7 +685,7 @@ export function ExpandableCard({
         aria-modal="true"
         layoutId={`card-${title}-${id}`}
         className={cn(
-          "flex flex-col justify-between bg-gray-500/20 rounded-2xl transition-all duration-300 border border-gray-700 cursor-pointer w-full overflow-hidden relative z-50",
+          "flex flex-col justify-between bg-gray-900/50 backdrop-blur-sm rounded-xl transition-all duration-300 border border-gray-800/50 cursor-pointer w-full overflow-hidden relative z-50 hover:bg-gray-900/70 hover:border-gray-700/50 hover:shadow-xl hover:shadow-red-900/10",
           className,
         )}
       >
@@ -688,17 +715,17 @@ export function ExpandableCard({
           <div className="flex flex-col gap-1 p-3 sm:p-4 flex-1">
             <motion.p
               layoutId={`description-${description}-${id}`}
-              className="text-white/65 md:text-left text-sm font-medium"
+              className="text-white/65 md:text-left text-sm font-medium sm:text-base"
               style={{
                 letterSpacing: '0.02em',
-                fontSize: '0.875rem'
+                fontSize: 'clamp(0.7rem, 1.5vw, 0.875rem)'
               }}
             >
               {description}
             </motion.p>
             <motion.h3
               layoutId={`title-${title}-${id}`}
-              className="text-gray-100 md:text-left font-semibold text-lg"
+              className="text-gray-100 md:text-left font-semibold text-base sm:text-lg"
               style={{
                 lineHeight: '1.2'
               }}
@@ -707,7 +734,7 @@ export function ExpandableCard({
             </motion.h3>
             {showLocationBadge && location && (
               <div className="mt-2">
-                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-600/20 border border-blue-600/30 text-blue-400">
+                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-800/70 border border-gray-700/50 text-gray-300">
                   📍 {location}
                 </span>
               </div>
@@ -730,11 +757,7 @@ export function ExpandableCard({
                 e.stopPropagation();
                 setActive(true);
               }}
-              className="h-8 w-8 shrink-0 flex items-center justify-center rounded-full bg-red-600/20 hover:bg-red-600/30 text-white/70 hover:text-white border border-red-600/30 hover:border-red-600/50 transition-colors duration-300 focus:outline-none relative z-40"
-              style={{
-                backgroundColor: 'rgba(229, 39, 39, 0.2)',
-                borderColor: 'rgba(229, 39, 39, 0.4)'
-              }}
+              className="h-8 w-8 shrink-0 flex items-center justify-center rounded-full bg-gray-700/50 hover:bg-gray-600/50 text-white/70 hover:text-white border border-gray-600/50 hover:border-gray-500/50 transition-colors duration-300 focus:outline-none relative z-40"
             >
               <motion.div
                 animate={{ rotate: active ? 45 : 0 }}
