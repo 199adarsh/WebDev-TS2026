@@ -63,7 +63,7 @@ export const mockSponsors = [
   {
     id: 1,
     name: "TechCorp",
-    tier: "Platinum",
+    tier: "Bronze",
     logoUrl: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&q=80"
   },
   {

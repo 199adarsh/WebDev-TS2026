@@ -220,7 +220,7 @@ Logo
 
 Name
 
-Tier (Platinum / Gold / Silver)
+Tier (Bronze / Gold / Silver)
 
 Clean hover elevation
 
