@@ -121,7 +121,7 @@ export function ParallaxHero() {
                 src="/TechSympoSium Logo.png" 
                 alt="Tech Symposium Logo"
                 className="max-w-full h-auto"
-                style={{ maxHeight: '200px', width: 'auto' }}
+                style={{ maxHeight: '170px', width: 'auto' }}
               />
             </div>
           
