@@ -62,17 +62,25 @@
 
 .parallax__content-overlay {
   position: absolute;
-  top: 240px;  /* Fixed position - moved down 10% */
+  top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 50;  /* Above all parallax layers - allows interaction */
   pointer-events: auto;  /* Allow interaction */
+  width: 90%;
+  max-width: 800px;
 }
 
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .parallax__content-overlay {
+    top: 30%;
+    width: 95%;
+    max-width: none;
+  }
+  
   .parallax__content-overlay h1 {
     font-size: 3rem;
   }

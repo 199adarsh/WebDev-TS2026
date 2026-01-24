@@ -121,12 +121,10 @@ export function ParallaxHero() {
                 src="/TechSympoSium Logo.png" 
                 alt="Tech Symposium Logo"
                 className="max-w-full h-auto"
-                style={{ maxHeight: '162px' }}
+                style={{ maxHeight: '200px', width: 'auto' }}
               />
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-4 font-display text-center">
-              
-            </h1>
+          
             <p className="text-xs sm:text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-4 font-body text-center px-4">
               Where innovation meets narrative
             </p>

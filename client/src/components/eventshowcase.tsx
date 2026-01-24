@@ -324,20 +324,42 @@ export default function ClubEventShowcase() {
       {/* Header */}
       <div className="text-center px-6 relative h-screen flex items-center justify-center">
         <div className="relative z-10">
-          <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-6 text-white">
-            Club Events
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-medium leading-relaxed">
-            Discover extraordinary events from 7 engineering clubs. From hackathons to robotics competitions, 
-            find your next adventure in tech and non-tech experiences.
-          </p>
+         <div className="text-center max-w-4xl mx-auto px-4">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-5xl font-display font-bold text-white mb-6"
+            >
+              DISCOVER THE EVENTS
+              EXPERIENCE TECH SYMPOSIUM
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-md md:text-lg text-white/80 mb-8"
+            >
+            Meet those who are powering the future!
+            </motion.p>
+          </div>
           <div className="mt-8 flex justify-center gap-4">
-            <div className="px-4 py-2 bg-red-600/20 border border-red-600/30 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="px-4 py-2 bg-red-600/20 border border-red-600/30 rounded-full"
+            >
               <span className="text-red-400 text-sm font-medium">7 Engineering Clubs</span>
-            </div>
-            <div className="px-4 py-2 bg-blue-600/20 border border-blue-600/30 rounded-full">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="px-4 py-2 bg-blue-600/20 border border-blue-600/30 rounded-full"
+            >
               <span className="text-blue-400 text-sm font-medium">14+ Events</span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

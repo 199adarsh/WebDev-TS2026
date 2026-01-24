@@ -14,9 +14,9 @@ import NotFound from "@/pages/not-found";
 import { FloatingNav } from "@/components/PillNav";
 import {
   Home as HomeIcon,
-  User as UserIcon,
-  Briefcase as BriefcaseIcon,
-  FileText as FileTextIcon
+  Calendar as CalendarIcon,
+  Crown as CrownIcon,
+  Code as CodeIcon
 } from "lucide-react"
 
 function Router() {
@@ -34,9 +34,9 @@ function Router() {
 function App() {
   const navItems = [
     { name: "Home", link: "/", icon: <HomeIcon size={20} /> },
-    { name: "Events", link: "/events", icon: <FileTextIcon size={20} /> },
-    { name: "Partners", link: "/sponsors", icon: <BriefcaseIcon size={20} /> },
-    { name: "Team", link: "/developers", icon: <UserIcon size={20} /> },
+    { name: "Events", link: "/events", icon: <CalendarIcon size={20} /> },
+    { name: "Sponsors", link: "/sponsors", icon: <CrownIcon size={20} /> },
+    { name: "Developers", link: "/developers", icon: <CodeIcon size={20} /> },
   ];
 
   return (
