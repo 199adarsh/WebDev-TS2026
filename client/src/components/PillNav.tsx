@@ -1,73 +1,86 @@
-import React, { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import { Link, useLocation } from "react-router-dom"
-import { LucideIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
+"use client";
+import React, { useState } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
+import { cn } from "@/lib/utils";
+import { Link, useLocation } from "react-router-dom";
+import {
+  Home as HomeIcon,
+  User as UserIcon,
+  Briefcase as BriefcaseIcon,
+  FileText as FileTextIcon
+} from "lucide-react";
 
-interface NavItem {
-  name: string
-  url: string
-  icon: LucideIcon
-}
+export const FloatingNav = ({
+  navItems,
+  className,
+}: {
+  navItems: {
+    name: string;
+    link: string;
+    icon?: JSX.Element;
+  }[];
+  className?: string;
+}) => {
+  const { scrollYProgress } = useScroll();
+  const location = useLocation();
+  const [visible, setVisible] = useState(true);
 
-interface NavBarProps {
-  items: NavItem[]
-  className?: string
-}
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    if (typeof current === "number") {
+      let direction = current! - scrollYProgress.getPrevious()!;
 
-export default function PillNav({ items, className }: NavBarProps) {
-  const location = useLocation()
-  const [activeTab, setActiveTab] = useState(items[0]?.name)
-
-  useEffect(() => {
-    const activeItem = items.find((item) => item.url === location.pathname)
-    if (activeItem) setActiveTab(activeItem.name)
-  }, [location.pathname, items])
+      // Always show nav at the top of the page
+      if (scrollYProgress.get() < 0.02) {
+        setVisible(true);
+      } else {
+        // Only hide when scrolling down, and show when scrolling up
+        if (direction < 0) {
+          setVisible(true);
+        } else if (direction > 0.02) { // Only hide if scrolling down significantly
+          setVisible(false);
+        }
+      }
+    }
+  });
 
   return (
-    <div
-      className={cn(
-        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6 pointer-events-auto",
-        className
-      )}
-    >
-      <div className="flex items-center gap-3 bg-black/40 border border-white/10 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
-        {items.map((item) => {
-          const Icon = item.icon
-          const isActive = activeTab === item.name
-
-          return (
-            <Link
-              key={item.name}
-              to={item.url}
-              onClick={() => setActiveTab(item.name)}
-              className={cn(
-                "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors pointer-events-auto",
-                "text-white/80 hover:text-white",
-                isActive && "bg-white/10 text-white"
-              )}
-            >
-              <span className="hidden md:inline">{item.name}</span>
-              <span className="md:hidden">
-                <Icon size={18} strokeWidth={2.5} />
-              </span>
-
-              {isActive && (
-                <motion.div
-                  layoutId="lamp"
-                  className="absolute inset-0 w-full bg-white/5 rounded-full -z-10"
-                  initial={false}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 30,
-                  }}
-                />
-              )}
-            </Link>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
+    <AnimatePresence mode="wait">
+      <motion.div
+        initial={{
+          opacity: 1,
+          y: -100,
+        }}
+        animate={{
+          y: visible ? 0 : -100,
+          opacity: visible ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.2,
+        }}
+        className={cn(
+          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-white/10 rounded-full bg-black/40 backdrop-blur-lg shadow-lg z-[5000] px-4 py-2 items-center justify-center space-x-4",
+          className
+        )}
+      >
+        {navItems.map((navItem: any, idx: number) => (
+          <Link
+            key={`link=${idx}`}
+            to={navItem.link}
+            className={cn(
+              "relative items-center flex space-x-1 text-white/80 hover:text-white transition-colors",
+              location.pathname === navItem.link && "text-white bg-white/10 px-3 py-1 rounded-full"
+            )}
+          >
+            <span className="block sm:hidden">{navItem.icon}</span>
+            <span className="hidden sm:block text-sm">{navItem.name}</span>
+          </Link>
+        ))}
+      </motion.div>
+    </AnimatePresence>
+  );
+};

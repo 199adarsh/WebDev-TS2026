@@ -11,7 +11,7 @@ import Events from "@/pages/Events";
 import Sponsors from "@/pages/Sponsors";
 import Developers from "@/pages/Developers";
 import NotFound from "@/pages/not-found";
-import NavBarDemo from "@/components/PillNav";
+import { FloatingNav } from "@/components/PillNav";
 import {
   Home as HomeIcon,
   User as UserIcon,
@@ -33,10 +33,10 @@ function Router() {
 
 function App() {
   const navItems = [
-    { name: "Home", url: "/", icon: HomeIcon },
-    { name: "Events", url: "/events", icon: FileTextIcon },
-    { name: "Partners", url: "/sponsors", icon: BriefcaseIcon },
-    { name: "Team", url: "/developers", icon: UserIcon },
+    { name: "Home", link: "/", icon: <HomeIcon size={18} /> },
+    { name: "Events", link: "/events", icon: <FileTextIcon size={18} /> },
+    { name: "Partners", link: "/sponsors", icon: <BriefcaseIcon size={18} /> },
+    { name: "Team", link: "/developers", icon: <UserIcon size={18} /> },
   ];
 
   return (
@@ -45,7 +45,7 @@ function App() {
         <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
           <TooltipProvider>
             <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
-              <NavBarDemo items={navItems} />
+              <FloatingNav navItems={navItems} />
               <Router />
               <Toaster />
             </div>

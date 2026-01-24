@@ -11,6 +11,8 @@ interface ExpandableCardProps {
   children?: React.ReactNode;
   className?: string;
   classNameExpanded?: string;
+  showLocationBadge?: boolean;
+  location?: string;
   [key: string]: any;
 }
 
@@ -28,6 +30,7 @@ export interface EventData {
   location: string;
   image: string;
   type: 'tech' | 'non-tech';
+  showLocationBadge?: boolean;
 }
 
 export interface ClubData {
@@ -70,7 +73,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-03-15',
         location: 'Main Auditorium',
         image: 'https://images.unsplash.com/photo-1584467722066-f40628b5a9be?w=800&q=80',
-        type: 'non-tech'
+        type: 'non-tech',
+        showLocationBadge: true
       },
       {
         id: 'aids-fundraiser',
@@ -79,7 +83,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-04-20',
         location: 'Community Hall',
         image: 'https://images.unsplash.com/photo-1541348263660-e30a4d490b1f?w=800&q=80',
-        type: 'non-tech'
+        type: 'non-tech',
+        showLocationBadge: true
       }
     ]
   },
@@ -103,7 +108,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-03-10',
         location: 'Tech Lab',
         image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       },
       {
         id: 'aiml-workshop',
@@ -112,7 +118,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-04-05',
         location: 'Computer Lab',
         image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       }
     ]
   },
@@ -136,7 +143,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-03-20',
         location: 'Engineering Workshop',
         image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       },
       {
         id: 'civil-green',
@@ -145,7 +153,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-04-15',
         location: 'Conference Hall',
         image: 'https://images.unsplash.com/photo-1541976590-71394168d59a?w=800&q=80',
-        type: 'non-tech'
+        type: 'non-tech',
+        showLocationBadge: true
       }
     ]
   },
@@ -169,7 +178,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-03-08',
         location: 'Computer Center',
         image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       },
       {
         id: 'cse-algo',
@@ -178,7 +188,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-04-12',
         location: 'Tech Auditorium',
         image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       }
     ]
   },
@@ -202,7 +213,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-03-18',
         location: 'Robotics Lab',
         image: 'https://images.unsplash.com/photo-1561557944-6f78295b58d2?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       },
       {
         id: 'entc-iot',
@@ -211,7 +223,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-04-10',
         location: 'Electronics Lab',
         image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       }
     ]
   },
@@ -235,7 +248,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-03-22',
         location: 'Electrical Lab',
         image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       },
       {
         id: 'etc-circuit',
@@ -244,7 +258,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-04-18',
         location: 'Design Studio',
         image: 'https://images.unsplash.com/photo-1598425085408-753d6c1fb8b5?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       }
     ]
   },
@@ -268,7 +283,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-03-25',
         location: 'Design Lab',
         image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       },
       {
         id: 'mech-engine',
@@ -277,7 +293,8 @@ const PRODUCT_DATA: Record<ProductId, ClubData> = {
         date: '2024-04-22',
         location: 'Mechanical Workshop',
         image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&q=80',
-        type: 'tech'
+        type: 'tech',
+        showLocationBadge: true
       }
     ]
   }
@@ -340,6 +357,8 @@ export default function ClubEventShowcase() {
                 title={event.title}
                 src={event.image}
                 description={`${club.label} • ${event.location}`}
+                showLocationBadge={event.showLocationBadge}
+                location={event.location}
               >
                 <div className="space-y-4">
                   <div>
@@ -391,6 +410,8 @@ export default function ClubEventShowcase() {
                 title={event.title}
                 src={event.image}
                 description={`${club.label} • ${event.location}`}
+                showLocationBadge={event.showLocationBadge}
+                location={event.location}
               >
                 <div className="space-y-4">
                   <div>
@@ -463,6 +484,8 @@ export function ExpandableCard({
   children,
   className,
   classNameExpanded,
+  showLocationBadge,
+  location,
   ...props
 }: ExpandableCardProps) {
   const [active, setActive] = React.useState(false);
@@ -508,13 +531,13 @@ export function ExpandableCard({
 
   return (
     <>
-      <AnimatePresence>
+             <AnimatePresence>
         {active && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm h-full w-full z-10"
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm h-full w-full z-[100] pointer-events-none"
           />
         )}
       </AnimatePresence>
@@ -522,14 +545,14 @@ export function ExpandableCard({
         {active && (
           <div
             className={cn(
-              "fixed inset-0 grid place-items-center z-[100] sm:mt-16 before:pointer-events-none",
+              "fixed inset-0 grid place-items-center z-[100] sm:mt-16 before:pointer-events-none pointer-events-none",
             )}
           >
             <motion.div
               layoutId={`card-${title}-${id}`}
               ref={cardRef}
               className={cn(
-                "w-full max-w-[850px] max-h-[90vh] flex flex-col sm:rounded-2xl backdrop-blur-xl relative border border-white/20",
+                "w-full max-w-[850px] max-h-[90vh] flex flex-col sm:rounded-2xl backdrop-blur-xl relative border border-white/20 pointer-events-auto",
                 classNameExpanded,
               )}
               style={{
@@ -541,11 +564,22 @@ export function ExpandableCard({
               }}
               {...props}
             >
-              <motion.div layoutId={`image-${title}-${id}`} className="flex-shrink-0">
+              <motion.div layoutId={`image-${title}-${id}`} className="flex-shrink-0 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/20 z-10"></div>
+                <div className="absolute inset-0 z-10"
+                  style={{
+                    background: 'radial-gradient(circle at center, transparent 60%, rgba(0,0,0,0.3) 100%)',
+                    filter: 'blur(2px)'
+                  }}
+                ></div>
                 <img
                   src={src}
                   alt={title}
                   className="w-full h-40 object-cover object-center sm:rounded-t-2xl"
+                  style={{
+                    filter: 'brightness(0.85) contrast(1.1)',
+                  }}
                 />
               </motion.div>
               
@@ -553,13 +587,19 @@ export function ExpandableCard({
                 <div className="flex-1">
                   <motion.p
                     layoutId={`description-${description}-${id}`}
-                    className="text-white/80 text-lg"
+                    className="text-white/65 text-lg"
+                    style={{
+                      letterSpacing: '0.02em'
+                    }}
                   >
                     {description}
                   </motion.p>
                   <motion.h3
                     layoutId={`title-${title}-${id}`}
-                    className="font-semibold text-white text-3xl sm:text-4xl mt-0.5"
+                    className="font-semibold text-gray-100 text-3xl sm:text-4xl mt-1"
+                    style={{
+                      lineHeight: '1.2'
+                    }}
                   >
                     {title}
                   </motion.h3>
@@ -618,7 +658,7 @@ export function ExpandableCard({
         aria-modal="true"
         layoutId={`card-${title}-${id}`}
         className={cn(
-          "flex flex-col justify-between bg-gray-500/20  rounded-2xl transition-all duration-300 border border-gray-700 cursor-pointer w-full overflow-hidden",
+          "flex flex-col justify-between bg-gray-500/20 rounded-2xl transition-all duration-300 border border-gray-700 cursor-pointer w-full overflow-hidden relative z-50",
           className,
         )}
       >
@@ -626,33 +666,63 @@ export function ExpandableCard({
           <motion.div 
             layoutId={`image-${title}-${id}`}
             onClick={() => setActive(true)}
-            className="cursor-pointer"
+            className="cursor-pointer relative overflow-hidden rounded-t-2xl"
           >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/20 z-10"></div>
+            <div className="absolute inset-0 z-10 rounded-t-2xl"
+              style={{
+                background: 'radial-gradient(circle at center, transparent 60%, rgba(0,0,0,0.3) 100%)',
+                filter: 'blur(2px)'
+              }}
+            ></div>
             <img
               src={src}
               alt={title}
-              className="w-full h-40 sm:h-48 md:h-56 object-cover object-center"
+              className="w-full h-40 sm:h-48 md:h-56 object-cover object-center rounded-t-2xl"
+              style={{
+                filter: 'brightness(0.85) contrast(1.1)',
+              }}
             />
           </motion.div>
-          <div className="flex flex-col gap-2 p-3 sm:p-4 flex-1">
+          <div className="flex flex-col gap-1 p-3 sm:p-4 flex-1">
             <motion.p
               layoutId={`description-${description}-${id}`}
-              className="text-white/80 md:text-left text-sm font-medium"
+              className="text-white/65 md:text-left text-sm font-medium"
+              style={{
+                letterSpacing: '0.02em',
+                fontSize: '0.875rem'
+              }}
             >
               {description}
             </motion.p>
             <motion.h3
               layoutId={`title-${title}-${id}`}
-              className="text-white md:text-left font-semibold"
+              className="text-gray-100 md:text-left font-semibold text-lg"
+              style={{
+                lineHeight: '1.2'
+              }}
             >
               {title}
             </motion.h3>
+            {showLocationBadge && location && (
+              <div className="mt-2">
+                <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-600/20 border border-blue-600/30 text-blue-400">
+                  📍 {location}
+                </span>
+              </div>
+            )}
           </div>
-          <div className="flex gap-2 items-center p-3 sm:p-4 pt-0">
-            <button className="flex-1 h-8 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg">
+          <div className="flex gap-2 items-center p-3 sm:p-4 pt-0 relative z-30">
+            <button 
+              className="flex-1 h-8 text-xs font-medium bg-red-600 text-white hover:bg-red-700 transition-colors rounded-lg relative z-30"
+              onClick={(e) => {
+                e.stopPropagation();
+                // Handle registration logic
+              }}
+            >
               Register Now
             </button>
-            <div className="relative z-[50] pointer-events-auto">
             <motion.button
               aria-label="Open card"
               layoutId={`button-${title}-${id}`}
@@ -660,36 +730,32 @@ export function ExpandableCard({
                 e.stopPropagation();
                 setActive(true);
               }}
-              className={cn(
-                "h-8 w-8 shrink-0 flex items-center justify-center rounded-full bg-red-600/20 hover:bg-red-600/30 text-white/70 hover:text-white border border-red-600/30 hover:border-red-600/50 transition-colors duration-300 focus:outline-none",
-                className,
-              )}
+              className="h-8 w-8 shrink-0 flex items-center justify-center rounded-full bg-red-600/20 hover:bg-red-600/30 text-white/70 hover:text-white border border-red-600/30 hover:border-red-600/50 transition-colors duration-300 focus:outline-none relative z-40"
               style={{
                 backgroundColor: 'rgba(229, 39, 39, 0.2)',
                 borderColor: 'rgba(229, 39, 39, 0.4)'
               }}
             >
-            <motion.div
-              animate={{ rotate: active ? 45 : 0 }}
-              transition={{ duration: 0.4 }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+              <motion.div
+                animate={{ rotate: active ? 45 : 0 }}
+                transition={{ duration: 0.4 }}
               >
-                <path d="M5 12h14" />
-                <path d="M12 5v14" />
-              </svg>
-            </motion.div>
-          </motion.button>
-            </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="M12 5v14" />
+                </svg>
+              </motion.div>
+            </motion.button>
           </div>
         </div>
       </motion.div>
