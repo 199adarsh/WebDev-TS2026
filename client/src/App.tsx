@@ -33,10 +33,10 @@ function Router() {
 
 function App() {
   const navItems = [
-    { name: "Home", link: "/", icon: <HomeIcon size={18} /> },
-    { name: "Events", link: "/events", icon: <FileTextIcon size={18} /> },
-    { name: "Partners", link: "/sponsors", icon: <BriefcaseIcon size={18} /> },
-    { name: "Team", link: "/developers", icon: <UserIcon size={18} /> },
+    { name: "Home", link: "/", icon: <HomeIcon size={20} /> },
+    { name: "Events", link: "/events", icon: <FileTextIcon size={20} /> },
+    { name: "Partners", link: "/sponsors", icon: <BriefcaseIcon size={20} /> },
+    { name: "Team", link: "/developers", icon: <UserIcon size={20} /> },
   ];
 
   return (
